@@ -37,4 +37,8 @@ public class Habitat {
 			if (n==nbr) return("Il y n'a pas cet animal")
 		}
 	}
+	public Character getchara(int i){
+		if(i<=nbr) return chara[i];
+	}
+	public int getnbr(){return nbr;}
 }
