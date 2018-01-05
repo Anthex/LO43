@@ -7,6 +7,16 @@ public class Character {
 	private String name;
 	private int x,y;
 	private int age;
+	
+	public renew(Character c){
+		temp=c.temp;
+		humidity=c.humidity;
+		life=c.life;
+		name=c.name;
+		age=c.age;
+		x=c.x;
+		y=c.y;
+	}
 	public Character() {}
 	public void die() {}
 	public void move(int x,int y) {}
