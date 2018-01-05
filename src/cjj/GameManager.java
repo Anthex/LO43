@@ -1,9 +1,7 @@
 package cjj;
 
-public class GameManager {
-	private CharacterManager charman;
-	private EventsManager[] events;
-	private UserInteractionManager playerManager;
+public class GameManager implements CharacterManager,UserInteractionManager,EventsManager{
+	private string playername;
 	
 	public void createNewWorld() {}
 	public void populate() {}
