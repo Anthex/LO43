@@ -1,7 +1,6 @@
 package cjj;
 
-public class CharacterManager {
-	private Character[] characters;
+public interface CharacterManager {
 	public void addCharacter(Species s) {}
 	public void getCharacterBySpecies(Species s) {}
 	public void getCharacterByHabitats(Habitat h) {}
