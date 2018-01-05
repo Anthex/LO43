@@ -1,7 +1,7 @@
 package cjj;
 
 public class Habitat {
-	private string name;
+	private String name;
 	private int upkeep;
 	private int temp;
 	private int humidity;
@@ -12,9 +12,10 @@ public class Habitat {
 	private int nbr;
 	private Character [] chara;
 	
-	public Habitat(string n){
+	public Habitat(String n){
 		nrb=0;
 		name=n;
+		chara=new Character[];
 	}
 	public int getTemp() { return temp;}
 	public int getHumidity() {return humidity;}
@@ -45,4 +46,11 @@ public class Habitat {
 		if(i<=nbr) return chara[i];
 	}
 	public int getnbr(){return nbr;}
+	public void renew(Habitat h){
+		name=h.name;
+		nbr=h.nbr;
+		for(int i=0;i<nbr;i++){
+			chara[i].renew(h.chara[i])
+		}
+	}
 }
