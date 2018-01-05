@@ -1,6 +1,7 @@
 package cjj;
 
 public class Habitat {
+	private string name;
 	private int upkeep;
 	private int temp;
 	private int humidity;
@@ -11,7 +12,10 @@ public class Habitat {
 	private int nbr;
 	private Character [] chara;
 	
-	public Habitat(){nrb=0;}
+	public Habitat(string n){
+		nrb=0;
+		name=n;
+	}
 	public int getTemp() { return temp;}
 	public int getHumidity() {return humidity;}
 	public void settemp(int t){ temp=t; }
