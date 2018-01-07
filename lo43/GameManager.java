@@ -28,8 +28,15 @@ public class GameManager implements CharacterManager,UserInteractionManager,Even
 	public void loop() {}
 	public void generateEvents() {}
 	public void move() {}
-	public void addCharacter(Species s,int h) {
-		
+	public void addCharacter(Species s,int h,String na) {
+		switch(expression){
+                   case dog:
+				Character c=new(0,0,0,na,s,h); /*前三个温度，湿度，寿命*/
+				habitat[h].addchar(c);
+				characters[nbr]=c;
+				nbr++;
+				break;
+		}
 	}
 	public void changeTemp(int h, int temp) {
 		habitat[h].settemp(temp);
