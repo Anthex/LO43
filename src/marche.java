@@ -6,12 +6,12 @@ import java.awt.event.ActionListener;
 import javax.swing.*;
 
 public class marche extends JFrame {
-public marche(){
-	habitatmap h0=new habitatmap(0);
-	habitatmap h1=new habitatmap(1);
-	habitatmap h2=new habitatmap(2);
-	habitatmap h3=new habitatmap(3);
-	habitatmap h4=new habitatmap(4);
+public marche(habitatmap[] habitatsList){
+	habitatmap h0=habitatsList[0];
+	habitatmap h1=habitatsList[1];
+	habitatmap h2=habitatsList[2];
+	habitatmap h3=habitatsList[3];
+	habitatmap h4=habitatsList[4];
      this.setTitle("magical world");
      String picPath="src/assets/map.jpg";
      Icon icon=new ImageIcon(picPath);
@@ -87,12 +87,12 @@ jb4.addActionListener(new ActionListener() {
 
 }
 
-
+/* //OBSOLETE
 public static void main(String[] args) {
     marche ma=new marche();
 	
     
    
 	 }
-
+*/
 }

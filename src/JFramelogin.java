@@ -13,10 +13,10 @@ import javax.swing.JButton;
 
 public class JFramelogin extends JFrame{
 	GameManager g;
-	marche ma=new marche();
+	marche ma;
 	 public JFramelogin() {
 		   
-		   this.setTitle("log in");
+		   this.setTitle("Login");
 		   this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);    
 	       this.setBounds(300, 250, 400, 300);   
 	       JTextField  textField1=new JTextField();  
@@ -28,7 +28,7 @@ public class JFramelogin extends JFrame{
 	        contentPane.setLayout(new GridLayout(3,1,5,5));  
 	        JPanel pane1=new JPanel();  
 	        contentPane.add(pane1);  
-	        JLabel label1=new JLabel("username��");  
+	        JLabel label1=new JLabel("Welcome. Please enter your username:");
 	        pane1.add(label1);  
 	        pane1.add(textField1);
 	        JButton another = new JButton("log in"); 
@@ -39,6 +39,7 @@ public class JFramelogin extends JFrame{
 	            	String na=textField1.getText();
 	            	g=new GameManager(na);
 	            	dispose();
+	            	ma = new marche(g.getHabitatsMaps());
 	            	ma.setVisible(true);
 	            }  
 	        });

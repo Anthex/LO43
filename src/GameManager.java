@@ -1,18 +1,19 @@
 public class GameManager implements CharacterManager,UserInteractionManager {
 	private String playername;
 	private Character[] characters=new Character[100];
-	private Habitat[] habitat=new Habitat[5];
+	private habitatmap[] habitatsList=new habitatmap[5];
 	int nbr;
 	
 	public GameManager(String p){
 		playername=p;
 		nbr=0;
-		habitat[0]=new Habitat("sky",75,25,50,25);
-		habitat[1]=new Habitat("earth",50,50,50,50);
-		habitat[2]=new Habitat("beach",20,60,60,60);
-		habitat[3]=new Habitat("mountain",30,60,30,60);
-		habitat[4]=new Habitat("see",50,50,50,50);
+		habitatsList[0]=new habitatmap(0);
+		habitatsList[1]=new habitatmap(1);
+		habitatsList[2]=new habitatmap(2);
+		habitatsList[3]=new habitatmap(3);
+		habitatsList[4]=new habitatmap(4);
 	}
+	/* //UNUSED
 	public void createNewWorld(String p) {
 		playername=p;
 		nbr=0;
@@ -22,11 +23,12 @@ public class GameManager implements CharacterManager,UserInteractionManager {
 		habitat[3]=new Habitat("mountain",30,60,30,60);
 		habitat[4]=new Habitat("see",50,50,50,50);
 	}
+	*/
 
 	public void loop() {
 		int i=0;
 		for(i=0; i<5; i++){
-			generateEvents(habitat[i]);
+			generateEvents(habitatsList[i].ha); //ha = habitat of the habitatmap
 		}
 
 		i=0;
@@ -36,7 +38,7 @@ public class GameManager implements CharacterManager,UserInteractionManager {
 	}
 
 	public void generateEvents(Character c) {
-		int t = (int) (Math.random()*100 + (habitat[c.getHabitat()].getTemp() - c.getTemp()));
+		int t = (int) (Math.random()*100 + (habitatsList[c.getHabitat()].ha.getTemp() - c.getTemp()));
 
 		if(t<20){
 			c.die();
@@ -47,7 +49,7 @@ public class GameManager implements CharacterManager,UserInteractionManager {
 		}else if(t>70){
 			//MVC "Un <espece> est mort de chaud"
 		}
-		int h = (int) (Math.random()*100 + (habitat[c.getHabitat()].getHumidity() - c.getHumidity()));
+		int h = (int) (Math.random()*100 + (habitatsList[c.getHabitat()].ha.getHumidity() - c.getHumidity()));
 
 		if(h<20){
 			c.die();
@@ -58,7 +60,7 @@ public class GameManager implements CharacterManager,UserInteractionManager {
 		}else if(h>70){
 			//MVC "Un <espece> s'est noyé"
 		}
-		int s = (int) (Math.random()*100 + (habitat[c.getHabitat()].getSleep() - c.getSleep()));
+		int s = (int) (Math.random()*100 + (habitatsList[c.getHabitat()].ha.getSleep() - c.getSleep()));
 
 		if(s<20){
 			c.die();
@@ -69,7 +71,7 @@ public class GameManager implements CharacterManager,UserInteractionManager {
 		}else if(s>70){
 			//MVC "Un <espece> est mort dans son sommeil"
 		}
-		int e = (int) (Math.random()*100 + (habitat[c.getHabitat()].getEnergy() - c.getEnergy()));
+		int e = (int) (Math.random()*100 + (habitatsList[c.getHabitat()].ha.getEnergy() - c.getEnergy()));
 
 		if(e<20){
 			c.die();
@@ -153,16 +155,18 @@ public class GameManager implements CharacterManager,UserInteractionManager {
 	}
 
 	public void move() {}//mvc
-
+	public habitatmap[] getHabitatsMaps(){
+		return habitatsList;
+	};
 	public void changeTemp(int h, int temp) {
-		habitat[h].setTemp(temp);
+		habitatsList[h].ha.setTemp(temp);
 	}
 
-	public void changeHumidity(int h, int humidity) { habitat[h].setHumidity(humidity); }
+	public void changeHumidity(int h, int humidity) { habitatsList[h].ha.setHumidity(humidity); }
 
-	public void changeSleep(int h, int sleep) { habitat[h].setSleep(sleep); }
+	public void changeSleep(int h, int sleep) {habitatsList[h].ha.setSleep(sleep); }
 
-	public void changeEnergy(int h, int energy) { habitat[h].setEnergy(energy); }
+	public void changeEnergy(int h, int energy) { habitatsList[h].ha.setEnergy(energy); }
 
 	public void changeTemp() {}
 
