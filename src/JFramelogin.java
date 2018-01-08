@@ -3,17 +3,15 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;  
 import javax.swing.JPanel;  
 import javax.swing.JTextField;  
-import javax.swing.border.EmptyBorder; 
-   
+import javax.swing.border.EmptyBorder;
 import java.awt.event.ActionEvent;   
-import java.awt.event.ActionListener;   
-  
+import java.awt.event.ActionListener;
 import javax.swing.JButton;     
  
 
 public class JFramelogin extends JFrame{
-	GameManager g;
-	marche ma;
+	private GameManager g;
+	private marche ma;
 	 public JFramelogin() {
 		   
 		   this.setTitle("Welcome");
@@ -37,9 +35,9 @@ public class JFramelogin extends JFrame{
 	        another.addActionListener(new ActionListener() {
 	            public void actionPerformed(ActionEvent e) {  
 	            	String na=textField1.getText();
-	            	g=new GameManager(na);
+	            	g=new GameManager(na); //create the gamemanager which will generate habitats
 	            	dispose();
-	            	ma = new marche(g.getHabitatsMaps());
+	            	ma = new marche(g.getHabitatsMaps()); // create the marche with the habitats' references
 	            	ma.setVisible(true);
 	            }  
 	        });
@@ -47,5 +45,6 @@ public class JFramelogin extends JFrame{
 	 }
 	 public static void main(String[] args) {
 		    JFramelogin ma=new JFramelogin();
+		    ma.g.loop();
 	 }
 }

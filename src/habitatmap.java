@@ -34,7 +34,7 @@ public class habitatmap extends JFrame {
 			picPath="src/assets/beach.jpg";
 			break;
 		}
-    this.setTitle("magical world");
+    this.setTitle("World");
     
     Icon icon=new ImageIcon(picPath);
     
@@ -60,6 +60,7 @@ public class habitatmap extends JFrame {
 	jb0.addActionListener(new ActionListener() {
 	    public void actionPerformed(ActionEvent e) {
 	    	Character c=new Character(ha.sep(0));
+	    	System.out.println("Added a " + ha.sep(0).toString() + " in " + ha.getName());
 	    	//ha.addchar(c);
 	    }  
 	});	
@@ -70,6 +71,7 @@ public class habitatmap extends JFrame {
 	jb1.addActionListener(new ActionListener() {
 	    public void actionPerformed(ActionEvent e) {
 	    	Character c=new Character(ha.sep(1));
+			System.out.println("Added a " + ha.sep(1).toString() + " in " + ha.getName());
 	    	//ha.addchar(c);
 	    }  
 	});
@@ -80,6 +82,7 @@ public class habitatmap extends JFrame {
 	jb2.addActionListener(new ActionListener() {
 	    public void actionPerformed(ActionEvent e) {
 	    	Character c=new Character(ha.sep(0));
+			System.out.println("Removed a " + ha.sep(0).toString() + " in " + ha.getName());
 	    	//ha.deletchara(c);
 	    }  
 	});
@@ -90,6 +93,7 @@ public class habitatmap extends JFrame {
 	jb3.addActionListener(new ActionListener() {
 	    public void actionPerformed(ActionEvent e) {
 	    	Character c=new Character(ha.sep(1));
+			System.out.println("Removed a " + ha.sep(1).toString() + " in " + ha.getName());
 	    	//ha.deletchara(c);
 	    }  
 	});

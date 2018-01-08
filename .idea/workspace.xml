@@ -2,6 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b911509-36e3-4ae7-8935-3c27824e3a63" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/vivarium/Habitat.class" afterPath="$PROJECT_DIR$/out/production/vivarium/Habitat.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/vivarium/habitatmap$1.class" afterPath="$PROJECT_DIR$/out/production/vivarium/habitatmap$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/vivarium/habitatmap$2.class" afterPath="$PROJECT_DIR$/out/production/vivarium/habitatmap$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/vivarium/habitatmap$3.class" afterPath="$PROJECT_DIR$/out/production/vivarium/habitatmap$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/vivarium/habitatmap$4.class" afterPath="$PROJECT_DIR$/out/production/vivarium/habitatmap$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/vivarium/habitatmap.class" afterPath="$PROJECT_DIR$/out/production/vivarium/habitatmap.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Habitat.java" afterPath="$PROJECT_DIR$/src/Habitat.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/JFramelogin.java" afterPath="$PROJECT_DIR$/src/JFramelogin.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/habitatmap.java" afterPath="$PROJECT_DIR$/src/habitatmap.java" />
     </list>
@@ -50,8 +58,8 @@
       <file leaf-file-name="habitatmap.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/habitatmap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="76" column="37" lean-forward="false" selection-start-line="76" selection-start-column="37" selection-end-line="76" selection-end-column="37" />
+            <state relative-caret-position="255">
+              <caret line="90" column="29" lean-forward="true" selection-start-line="90" selection-start-column="29" selection-end-line="90" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -60,12 +68,10 @@
       <file leaf-file-name="JFramelogin.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/JFramelogin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-105">
-              <caret line="15" column="14" lean-forward="true" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+            <state relative-caret-position="456">
+              <caret line="47" column="18" lean-forward="true" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1650#1651#0" expanded="true" />
-                <element signature="e#1694#1695#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -74,8 +80,8 @@
       <file leaf-file-name="marche.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/marche.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="587">
-              <caret line="89" column="13" lean-forward="true" selection-start-line="89" selection-start-column="13" selection-end-line="89" selection-end-column="13" />
+            <state relative-caret-position="376">
+              <caret line="92" column="4" lean-forward="true" selection-start-line="92" selection-start-column="4" selection-end-line="92" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -107,8 +113,8 @@
       <file leaf-file-name="Habitat.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Habitat.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="53" lean-forward="false" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="53" />
+            <state relative-caret-position="374">
+              <caret line="79" column="0" lean-forward="true" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -125,6 +131,7 @@
         <option value="$PROJECT_DIR$/src/GameManager.java" />
         <option value="$PROJECT_DIR$/src/marche.java" />
         <option value="$PROJECT_DIR$/src/JFramelogin.java" />
+        <option value="$PROJECT_DIR$/src/Habitat.java" />
         <option value="$PROJECT_DIR$/src/habitatmap.java" />
       </list>
     </option>
@@ -300,7 +307,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2793000" />
+    <option name="totallyTimeSpent" value="3990000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1513" height="983" extended-state="6" />
@@ -433,8 +440,6 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1650#1651#0" expanded="true" />
-            <element signature="e#1694#1695#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -532,8 +537,6 @@
           <caret line="16" column="8" lean-forward="false" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1650#1651#0" expanded="true" />
-            <element signature="e#1694#1695#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -647,8 +650,6 @@
           <caret line="16" column="8" lean-forward="false" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1650#1651#0" expanded="true" />
-            <element signature="e#1694#1695#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -756,11 +757,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Habitat.java">
+    <entry file="file://$PROJECT_DIR$/src/GameManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="53" lean-forward="false" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="53" />
-          <folding />
+        <state relative-caret-position="-1351">
+          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding>
+            <element signature="e#3885#3886#0" expanded="true" />
+            <element signature="e#3911#3912#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -793,41 +797,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/JFramelogin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="47" column="18" lean-forward="true" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/marche.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="587">
-          <caret line="89" column="13" lean-forward="true" selection-start-line="89" selection-start-column="13" selection-end-line="89" selection-end-column="13" />
+        <state relative-caret-position="376">
+          <caret line="92" column="4" lean-forward="true" selection-start-line="92" selection-start-column="4" selection-end-line="92" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameManager.java">
+    <entry file="file://$PROJECT_DIR$/src/Habitat.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1351">
-          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding>
-            <element signature="e#3885#3886#0" expanded="true" />
-            <element signature="e#3911#3912#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/JFramelogin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-105">
-          <caret line="15" column="14" lean-forward="true" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1650#1651#0" expanded="true" />
-            <element signature="e#1694#1695#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="374">
+          <caret line="79" column="0" lean-forward="true" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/habitatmap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="76" column="37" lean-forward="false" selection-start-line="76" selection-start-column="37" selection-end-line="76" selection-end-column="37" />
+        <state relative-caret-position="255">
+          <caret line="90" column="29" lean-forward="true" selection-start-line="90" selection-start-column="29" selection-end-line="90" selection-end-column="29" />
           <folding />
         </state>
       </provider>

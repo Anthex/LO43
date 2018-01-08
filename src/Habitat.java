@@ -81,7 +81,7 @@ public class Habitat {
 	public void setHumidity(int h){humidity=h;}
 
 	public void setSleep(int s){sleep=s;}
-
+	public String getName(){return this.name;}
 	public void setEnergy(int e){energy=e;}
 	public int getNbr(){return nbr;}
 
