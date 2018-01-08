@@ -12,7 +12,7 @@ public class marche extends JFrame {
         habitatmap h2 = habitatsList[2];
         habitatmap h3 = habitatsList[3];
         habitatmap h4 = habitatsList[4];
-        this.setTitle("magical world");
+        this.setTitle("World Map");
         String picPath = "src/assets/map.jpg";
         Icon icon = new ImageIcon(picPath);
 

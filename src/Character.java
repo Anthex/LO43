@@ -26,8 +26,8 @@ public class Character {
                 humidity = 25;
                 sleep = 50;
                 energy = 25;
-                x = 0;
-                y = 0;
+                x = (int) (Math.random() * 800);
+                y = (int) (Math.random() * 450);
                 sp = Species.angel;
                 ha = (int) (Math.random() * 4);
                 break;
@@ -36,8 +36,8 @@ public class Character {
                 humidity = 50;
                 sleep = 50;
                 energy = 50;
-                x = 0;
-                y = 0;
+                x = (int) (Math.random() * 800);
+                y = (int) (Math.random() * 450);
                 sp = Species.human;
                 ha = (int) (Math.random() * 4);
                 break;
@@ -46,9 +46,9 @@ public class Character {
                 humidity = 75;
                 sleep = 75;
                 energy = 75;
-                x = 0;
-                y = 0;
-                sp = Species.centaure;
+                x = (int) (Math.random() * 800);
+                y = (int) (Math.random() * 450);
+                sp = Species.centaur;
                 ha = (int) (Math.random() * 4);
                 break;
             case 3:
@@ -56,8 +56,8 @@ public class Character {
                 humidity = 25;
                 sleep = 25;
                 energy = 50;
-                x = 0;
-                y = 0;
+                x = (int) (Math.random() * 800);
+                y = (int) (Math.random() * 450);
                 sp = Species.mermaid;
                 ha = (int) (Math.random() * 4);
                 break;
@@ -91,7 +91,7 @@ public class Character {
             case human:
                 this.renew(new Character(50, 50, 50, 50, s));
                 break;
-            case centaure:
+            case centaur:
                 this.renew(new Character(25, 75, 75, 75, s));
                 break;
             case mermaid:
@@ -106,7 +106,11 @@ public class Character {
     public void move(int x, int y) {
         this.x += x;
         this.y += y;
-    } //MVC
+    }
+    public void move() {
+        this.x += (int)(Math.random() * 20)-10;
+        this.y += (int)(Math.random() * 20)-10;
+    }
 
     public int getTemp() {
         return temp;

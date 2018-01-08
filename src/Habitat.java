@@ -34,7 +34,7 @@ public class Habitat {
             case 1:
                 name = "earth";
                 se[0] = Species.human;
-                se[1] = Species.centaure;
+                se[1] = Species.centaur;
                 temp = 50;
                 humidity = 50;
                 sleep = 50;
@@ -42,7 +42,7 @@ public class Habitat {
                 break;
             case 2:
                 name = "beach";
-                se[0] = Species.centaure;
+                se[0] = Species.centaur;
                 se[1] = Species.mermaid;
                 temp = 20;
                 humidity = 60;
@@ -51,7 +51,7 @@ public class Habitat {
                 break;
             case 3:
                 name = "mountain";
-                se[0] = Species.centaure;
+                se[0] = Species.centaur;
                 se[1] = Species.angel;
                 temp = 30;
                 humidity = 60;

@@ -4,9 +4,8 @@ import java.awt.Font;
 import java.awt.Point;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.File;
+import javax.swing.JPanel;
 import java.util.ArrayList;
-
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -15,6 +14,9 @@ import javax.swing.JLabel;
 
 public class habitatmap extends JFrame {
     Habitat ha;
+    JButton jb0, jb1, jb2, jb3;
+    JLabel lab;
+    Icon icon;
     ArrayList<Character> localCharacters;
     ArrayList<Character> globalCharactersReference; //used to add new characters
     public habitatmap(int h,  ArrayList<Character> refToCharacters) {
@@ -40,24 +42,20 @@ public class habitatmap extends JFrame {
         }
         this.setTitle("World");
 
-        Icon icon = new ImageIcon(picPath);
+        icon = new ImageIcon(picPath );
 
 
 
-        JLabel lab = new JLabel(icon, JLabel.CENTER);
-        Font font = new Font("����", Font.ITALIC + Font.BOLD, 28);
-        lab.setForeground(Color.RED);
-        lab.setBackground(Color.YELLOW);
-        lab.setFont(font);
+        lab = new JLabel(icon, JLabel.CENTER);
+        lab.setBounds(0,0,900,510);
         this.add(lab);
         Dimension d = new Dimension();
         d.setSize(900, 510);
         this.setSize(d);
-        this.setBackground(Color.WHITE);
         Point p = new Point();
         p.setLocation(280, 180);
         this.setLocation(p);
-        JButton jb0 = new JButton("add " + ha.sep(0));
+        jb0 = new JButton("add " + ha.sep(0));
         jb0.setBounds(50, 100, 100, 40);
         lab.add(jb0);
 
@@ -71,12 +69,13 @@ public class habitatmap extends JFrame {
                 }
                 javax.swing.JOptionPane.showMessageDialog(null,a);
 
+                updateGraphics();
                 System.out.println("Added a " + ha.sep(0).toString() + " in " + ha.getName());
                 //ha.addchar(c);
             }
         });
 
-        JButton jb1 = new JButton("add " + ha.sep(1));
+         jb1 = new JButton("add " + ha.sep(1));
         jb1.setBounds(50, 150, 100, 40);
         lab.add(jb1);
         jb1.addActionListener(new ActionListener() {
@@ -87,7 +86,7 @@ public class habitatmap extends JFrame {
             }
         });
 
-        JButton jb2 = new JButton("delete " + ha.sep(0));
+         jb2 = new JButton("delete " + ha.sep(0));
         jb2.setBounds(50, 200, 100, 40);
         lab.add(jb2);
         jb2.addActionListener(new ActionListener() {
@@ -97,7 +96,7 @@ public class habitatmap extends JFrame {
             }
         });
 
-        JButton jb3 = new JButton("delete " + ha.sep(1));
+         jb3 = new JButton("delete " + ha.sep(1));
         jb3.setBounds(50, 250, 100, 40);
         lab.add(jb3);
         jb3.addActionListener(new ActionListener() {
@@ -110,12 +109,38 @@ public class habitatmap extends JFrame {
     }
 
     public void updateGraphics(){
-        ArrayList<JLabel> characterIcons = new ArrayList<>();
-        /*
+        ImageIcon human = new ImageIcon("src/assets/char/human.png");
+        ImageIcon centaur = new ImageIcon("src/assets/char/centaur.png");
+        ImageIcon angel = new ImageIcon("src/assets/char/angel.png");
+        JPanel panel = (JPanel) this.getContentPane();
+        panel.setBounds(0, 0, 900, 510);
+        panel.setBackground(new Color(0,0,0,0));
+        panel.setLayout(null);
+
         for(Character localChar:localCharacters){
-            characterIcons.add(new JLabel("")
-        }*/
-        JLabel test = new JLabel("<ph>");
-        this.add(test);
+            JLabel character=null;
+            Species expression = localChar.getSp();
+            switch (expression) {
+                case human:
+                    character  = new JLabel(human);
+                    break;
+                case angel:
+                    character  = new JLabel(angel);
+                    break;
+                case centaur:
+                    character  = new JLabel(centaur);
+                    break;
+                case mermaid:
+                    character  = new JLabel(human);
+                    break;
+            }
+            this.add(character);
+            Dimension size = character.getPreferredSize();
+            character.setBounds(0, 0, size.width, size.height);
+            character.setLocation(localChar.getX(),localChar.getY());
+        }
+        this.add(lab);
+
+       panel.validate();
     }
 }

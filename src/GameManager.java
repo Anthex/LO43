@@ -23,8 +23,10 @@ public class GameManager implements CharacterManager, UserInteractionManager {
     public void updateAllLocalCharacters(){
        for (habitatmap habitat_map:habitatsList){
             updateLocalCharacters(habitat_map);
+            habitat_map.updateGraphics();
         }
         //UPDATE GRAPHIC HABITAT
+
     }
 
     /* //UNUSED
@@ -48,6 +50,7 @@ public class GameManager implements CharacterManager, UserInteractionManager {
 
         i = 0;
         for (i = 0; i < characters.size(); i++) {
+            characters.get(i).move();
             generateEvents(characters.get(i));
         }
     }

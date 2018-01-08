@@ -61,16 +61,16 @@ public class JFramelogin extends JFrame {
             startWindow.g.loop();
             startWindow.g.updateAllLocalCharacters();
             try {
-                Thread.sleep(5000);
+                Thread.sleep(1000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }
         if (startWindow.g.getPopulation() > 0) {
-            System.out.println("Programme interrompu par l'utilisateur");
+            System.out.println(" -- Programme interrompu par l'utilisateur --");
         } else {
             System.out.println(" -- Tous les personnages sont morts : Fin de la simulation --");
         }
-
+        System.exit(0);
     }
 }

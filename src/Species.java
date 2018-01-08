@@ -1,4 +1,4 @@
 public enum Species {
-	angel, human, centaure, mermaid;
+	angel, human, centaur, mermaid;
 
 }
