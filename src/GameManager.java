@@ -9,12 +9,24 @@ public class GameManager implements CharacterManager, UserInteractionManager {
     public GameManager(String p) {
         playername = p;
         nbr = 0;
-        habitatsList[0] = new habitatmap(0);
-        habitatsList[1] = new habitatmap(1);
-        habitatsList[2] = new habitatmap(2);
-        habitatsList[3] = new habitatmap(3);
-        habitatsList[4] = new habitatmap(4);
+        habitatsList[0] = new habitatmap(0, characters);
+        habitatsList[1] = new habitatmap(1, characters);
+        habitatsList[2] = new habitatmap(2, characters);
+        habitatsList[3] = new habitatmap(3, characters);
+        habitatsList[4] = new habitatmap(4, characters);
     }
+
+    public void updateLocalCharacters(habitatmap h){
+        h.localCharacters = getCharacterByHabitat(h.ha);
+    }
+
+    public void updateAllLocalCharacters(){
+       for (habitatmap habitat_map:habitatsList){
+            updateLocalCharacters(habitat_map);
+        }
+        //UPDATE GRAPHIC HABITAT
+    }
+
     /* //UNUSED
 	public void createNewWorld(String p) {
 		playername=p;
@@ -43,11 +55,11 @@ public class GameManager implements CharacterManager, UserInteractionManager {
     public void generateEvents(Character c) {
         int t = (int) (Math.random() * 100 + (habitatsList[c.getHabitat()].ha.getTemp() - c.getTemp()));
 
-        if (t < 20) {
+        if (t < 10) {
             c.die();
             characters.remove(c);
             System.out.println("(!) Un " + c.getSp().toString() + " est mort dans " + habitatsList[c.getHabitat()].ha.getName());
-        } else if (t > 80) {
+        } else if (t > 90) {
             c.die();
         } else if (t < 30) {
             // MVC "Un <espece> est mort de froid"
@@ -197,7 +209,8 @@ public class GameManager implements CharacterManager, UserInteractionManager {
         return out.toArray(new Character[]{});
     }
 
-    public Character[] getCharacterByHabitats(Habitat h) {
+    /* //OBSOLETE
+    public Character[] getCharacterByHabitat(Habitat h) {
         ArrayList<Character> out = new ArrayList<Character>();
         for (Character chara : characters) {
             if (chara.getHabitat() == h.getId()) {
@@ -205,6 +218,16 @@ public class GameManager implements CharacterManager, UserInteractionManager {
             }
         }
         return out.toArray(new Character[]{});
+    }*/
+
+    public ArrayList<Character> getCharacterByHabitat(Habitat h) {
+        ArrayList<Character> out = new ArrayList<Character>();
+        for (Character chara : characters) {
+            if (chara.getHabitat() == h.getId()) {
+                out.add(chara);
+            }
+        }
+        return out;
     }
 
     public void createCharacter() {

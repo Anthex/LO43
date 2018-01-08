@@ -5,6 +5,7 @@ import java.awt.Point;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
+import java.util.ArrayList;
 
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
@@ -14,8 +15,10 @@ import javax.swing.JLabel;
 
 public class habitatmap extends JFrame {
     Habitat ha;
-
-    public habitatmap(int h) {
+    ArrayList<Character> localCharacters;
+    ArrayList<Character> globalCharactersReference; //used to add new characters
+    public habitatmap(int h,  ArrayList<Character> refToCharacters) {
+        localCharacters = new ArrayList<>();
         String picPath = null;
         ha = new Habitat(h);
         switch (h) {
@@ -40,6 +43,7 @@ public class habitatmap extends JFrame {
         Icon icon = new ImageIcon(picPath);
 
 
+
         JLabel lab = new JLabel(icon, JLabel.CENTER);
         Font font = new Font("����", Font.ITALIC + Font.BOLD, 28);
         lab.setForeground(Color.RED);
@@ -61,6 +65,12 @@ public class habitatmap extends JFrame {
         jb0.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 //Character c = new Character(ha.sep(0));
+                String a="";
+                for(Character c:localCharacters){
+                    a+= " - " + c.getSp();
+                }
+                javax.swing.JOptionPane.showMessageDialog(null,a);
+
                 System.out.println("Added a " + ha.sep(0).toString() + " in " + ha.getName());
                 //ha.addchar(c);
             }
@@ -99,4 +109,13 @@ public class habitatmap extends JFrame {
 
     }
 
+    public void updateGraphics(){
+        ArrayList<JLabel> characterIcons = new ArrayList<>();
+        /*
+        for(Character localChar:localCharacters){
+            characterIcons.add(new JLabel("")
+        }*/
+        JLabel test = new JLabel("<ph>");
+        this.add(test);
+    }
 }

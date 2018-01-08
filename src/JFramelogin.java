@@ -48,16 +48,20 @@ public class JFramelogin extends JFrame {
     public static void main(String[] args) {
         JFramelogin startWindow = new JFramelogin();
         while (startWindow.ma == null) ; // wait for the gamemanager to be initialized
-        while (!startWindow.ma.isActive())
+        while (!startWindow.ma.isVisible())
             ; //make sure the component is initialized in order to avoid aborting the program on main loop
 
         startWindow.g.createCharacter();
+        startWindow.g.createCharacter();
+        startWindow.g.createCharacter();
+
 
         // MAIN LOOP CALL
-        while (startWindow.g.getPopulation() > 0 && startWindow.ma.isActive()) {
+        while (startWindow.g.getPopulation() > 0 && startWindow.ma.isVisible()) {
             startWindow.g.loop();
+            startWindow.g.updateAllLocalCharacters();
             try {
-                Thread.sleep(4000);
+                Thread.sleep(5000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
