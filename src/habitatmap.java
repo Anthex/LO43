@@ -60,7 +60,7 @@ public class habitatmap extends JFrame {
 	jb0.addActionListener(new ActionListener() {
 	    public void actionPerformed(ActionEvent e) {
 	    	Character c=new Character(ha.sep(0));
-	    	ha.addchar(c);
+	    	//ha.addchar(c);
 	    }  
 	});	
 	
@@ -70,7 +70,7 @@ public class habitatmap extends JFrame {
 	jb1.addActionListener(new ActionListener() {
 	    public void actionPerformed(ActionEvent e) {
 	    	Character c=new Character(ha.sep(1));
-	    	ha.addchar(c);
+	    	//ha.addchar(c);
 	    }  
 	});
 	
@@ -80,7 +80,7 @@ public class habitatmap extends JFrame {
 	jb2.addActionListener(new ActionListener() {
 	    public void actionPerformed(ActionEvent e) {
 	    	Character c=new Character(ha.sep(0));
-	    	ha.deletchara(c);
+	    	//ha.deletchara(c);
 	    }  
 	});
 	
@@ -90,7 +90,7 @@ public class habitatmap extends JFrame {
 	jb3.addActionListener(new ActionListener() {
 	    public void actionPerformed(ActionEvent e) {
 	    	Character c=new Character(ha.sep(1));
-	    	ha.deletchara(c);
+	    	//ha.deletchara(c);
 	    }  
 	});
 	
