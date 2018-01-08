@@ -23,20 +23,20 @@ public class Character {
 		int j = (int) (Math.random() * 3);
 		switch (j){
 			case 0:
-				int i = (int) (Math.random() * 4);
-				this.renew(new Character(75,25,50,25,Species.angel,i));
+				int k = (int) (Math.random() * 4);
+				this.renew(new Character(75,25,50,25,Species.angel,k));
 				break;
 			case 1:
-				int i = (int) (Math.random() * 4);
-				this.renew(new Character(50,50,50,50,Species.human,i));
+				int k = (int) (Math.random() * 4);
+				this.renew(new Character(50,50,50,50,Species.human,k));
 				break;
 			case 2:
-				int i = (int) (Math.random() * 4);
-				this.renew(new Character(25,75,75,75,Species.centaure,i));
+				int k = (int) (Math.random() * 4);
+				this.renew(new Character(25,75,75,75,Species.centaure,k));
 				break;
 			case 3:
-				int i = (int) (Math.random() * 4);
-				this.renew(new Character(75,25,25,50,Species.mermaid,i));
+				int k = (int) (Math.random() * 4);
+				this.renew(new Character(75,25,25,50,Species.mermaid,k));
 				break;
 		}
 	}
