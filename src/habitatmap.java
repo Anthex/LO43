@@ -40,33 +40,23 @@ public class habitatmap extends JFrame {
     
 
     JLabel lab=new JLabel(icon,JLabel.CENTER);
-
-    Font font=new Font("����",Font.ITALIC+Font.BOLD,28);
-
-    lab.setForeground(Color.RED);
-
-    lab.setBackground(Color.YELLOW);
-
-    lab.setFont(font);
-
-    this.add(lab);
+	Font font=new Font("����",Font.ITALIC+Font.BOLD,28);
+	lab.setForeground(Color.RED);
+	lab.setBackground(Color.YELLOW);
+	lab.setFont(font);
+	this.add(lab);
     Dimension d=new Dimension();
-
-    d.setSize(900,510);
-
-    this.setSize(d);
-
-    this.setBackground(Color.WHITE);
-
-    Point p=new Point();
-
-    p.setLocation(280,180);
-
+	d.setSize(900,510);
+	this.setSize(d);
+	this.setBackground(Color.WHITE);
+	Point p=new Point();
+	p.setLocation(280,180);
 	this.setLocation(p);
-	
-	JButton jb0 = new JButton("add "+ha.sep(0)); 
+		JButton jb0 = new JButton("add "+ha.sep(0));
 	jb0.setBounds(50,100,100,40);
 	lab.add(jb0);
+
+	/* Action listener to add new characters on button click*/
 	jb0.addActionListener(new ActionListener() {
 	    public void actionPerformed(ActionEvent e) {
 	    	Character c=new Character(ha.sep(0));
