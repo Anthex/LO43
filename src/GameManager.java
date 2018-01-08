@@ -28,13 +28,13 @@ public class GameManager implements CharacterManager,UserInteractionManager {
 	*/
 
 	public void loop() {
+		System.out.println("\n\n << Generating events for " + characters.size() + " characters >>");
 		int i=0;
 		for(i=0; i<5; i++){
 			generateEvents(habitatsList[i].ha); //ha = habitat of the habitatmap
 		}
 
 		i=0;
-		System.out.println("Generating events for " + characters.size() + " characters");
 		for(i=0; i< characters.size(); i++){
 			generateEvents(characters.get(i));
 		}
@@ -45,6 +45,8 @@ public class GameManager implements CharacterManager,UserInteractionManager {
 
 		if(t<20){
 			c.die();
+			characters.remove(c);
+			System.out.println("Un " + c.getSp().toString() + " est mort dans " + habitatsList[c.getHabitat()].ha.getName());
 		}else if(t>80){
 			c.die();
 		}else if(t<30){
@@ -96,7 +98,7 @@ public class GameManager implements CharacterManager,UserInteractionManager {
 				}else{
 					h.setTemp(h.getTemp() + 20);
 				}
-				//mvc "les radiateurs de <habitat> sont cassés"
+				System.out.println("les radiateurs de " + h.getName()+ " sont cassés");
 				break;
 			case 1:
 				if((h.getTemp() - 20) < 0){
@@ -104,7 +106,7 @@ public class GameManager implements CharacterManager,UserInteractionManager {
 				}else{
 					h.setTemp(h.getTemp() - 20);
 				}
-				//mvc "un feu s'est déclaré dans <habitat>"
+				System.out.println("un feu s'est déclaré dans " + h.getName());
 				break;
 			case 2:
 				if((h.getHumidity() + 20) > 100){
@@ -112,7 +114,7 @@ public class GameManager implements CharacterManager,UserInteractionManager {
 				}else{
 					h.setHumidity(h.getHumidity() + 20);
 				}
-				//mvc "les canalisations sont bouchés, l'eau n'arrive plus à <habitat>"
+				System.out.println("les canalisations sont bouchés, l'eau n'arrive plus à " + h.getName());
 				break;
 			case 3:
 				if((h.getHumidity() - 20) < 0){
@@ -120,7 +122,7 @@ public class GameManager implements CharacterManager,UserInteractionManager {
 				}else{
 					h.setHumidity(h.getHumidity() - 20);
 				}
-				//mvc "une innondation s'est déclaré dans <habitat>"
+				System.out.println("une innondation s'est déclaré dans " + h.getName());
 				break;
 			case 4:
 				if((h.getSleep() + 20) > 100){
@@ -128,7 +130,7 @@ public class GameManager implements CharacterManager,UserInteractionManager {
 				}else{
 					h.setSleep(h.getSleep() + 20);
 				}
-				//mvc "la lumiere de <habitat> est cassé, personne ne se réveille"
+				System.out.println("la lumiere de " + h.getName() + " est cassé, personne ne se réveille");
 				break;
 			case 5:
 				if((h.getSleep() - 20) < 0){
@@ -136,7 +138,7 @@ public class GameManager implements CharacterManager,UserInteractionManager {
 				}else{
 					h.setSleep(h.getSleep() - 20);
 				}
-				//mvc "les lumières de <habitat> ne s'éteignent plus, impossible de dormir"
+				System.out.println("les lumières de " + h.getName() + " ne s'éteignent plus, impossible de dormir");
 				break;
 			case 6:
 				if((h.getEnergy() + 20) > 100){
@@ -144,7 +146,7 @@ public class GameManager implements CharacterManager,UserInteractionManager {
 				}else{
 					h.setEnergy(h.getEnergy() + 20);
 				}
-				//mvc "on meurt de faim dans <habitat>"
+				System.out.println("on meurt de faim dans " + h.getName());
 				break;
 			case 7:
 				if((h.getEnergy() - 20) < 0){
@@ -152,7 +154,7 @@ public class GameManager implements CharacterManager,UserInteractionManager {
 				}else{
 					h.setEnergy(h.getEnergy() - 20);
 				}
-				//mvc "trop de nourriture arrive à <habitat>, c'est du gaspillage
+				System.out.println("trop de nourriture arrive à " + h.getName() + ", c'est du gaspillage");
 				break;
 		}
 	}
@@ -192,6 +194,13 @@ public class GameManager implements CharacterManager,UserInteractionManager {
 	}
 
 	public void createCharacter(){
-		//characters.add(new )
+		characters.add(new Character());
+		characters.add(new Character());
+		characters.add(new Character());
+		characters.add(new Character());
+		characters.add(new Character());
+		characters.add(new Character());
 	}
+
+	public int getPopulation(){return characters.size();}
 }

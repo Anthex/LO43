@@ -44,10 +44,19 @@ public class JFramelogin extends JFrame{
 	        this.setVisible(true); 
 	 }
 	 public static void main(String[] args) {
-		    JFramelogin ma=new JFramelogin();
-		    while(ma.g == null); // wait for the gamemanager to be initialized
-		 	ma.g
-			ma.g.loop();
+		    JFramelogin startWindow=new JFramelogin();
+		    while(startWindow.ma == null); // wait for the components to be initialized
+
+		 	startWindow.g.createCharacter();
+
+			while (startWindow.g.getPopulation() > 0 && startWindow.ma.isVisible()){
+				startWindow.g.loop();
+				try {
+					Thread.sleep(4000);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+			}
 
 	 }
 }
