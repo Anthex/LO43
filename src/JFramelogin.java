@@ -16,7 +16,7 @@ public class JFramelogin extends JFrame{
 	marche ma;
 	 public JFramelogin() {
 		   
-		   this.setTitle("Login");
+		   this.setTitle("Welcome");
 		   this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);    
 	       this.setBounds(300, 250, 400, 300);   
 	       JTextField  textField1=new JTextField();  
@@ -47,7 +47,5 @@ public class JFramelogin extends JFrame{
 	 }
 	 public static void main(String[] args) {
 		    JFramelogin ma=new JFramelogin();
-		    
-		    
-		 	 }
+	 }
 }

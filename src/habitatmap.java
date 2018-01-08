@@ -74,7 +74,7 @@ public class habitatmap extends JFrame {
 	    }  
 	});
 	
-	JButton jb2 = new JButton("delet "+ha.sep(0)); 
+	JButton jb2 = new JButton("delete "+ha.sep(0));
 	jb2.setBounds(50,200,100,40);
 	lab.add(jb2);
 	jb2.addActionListener(new ActionListener() {
@@ -84,7 +84,7 @@ public class habitatmap extends JFrame {
 	    }  
 	});
 	
-	JButton jb3 = new JButton("delet "+ha.sep(1)); 
+	JButton jb3 = new JButton("delete "+ha.sep(1));
 	jb3.setBounds(50,250,100,40);
 	lab.add(jb3);
 	jb3.addActionListener(new ActionListener() {
