@@ -13,7 +13,7 @@ public marche(){
 	habitatmap h3=new habitatmap(3);
 	habitatmap h4=new habitatmap(4);
      this.setTitle("magical world");
-     String picPath="G:"+File.separator+"1ѧϰ"+File.separator+"lo43"+File.separator+"lo43"+File.separator+"map.jpg";
+     String picPath="src/assets/map.jpg";
      Icon icon=new ImageIcon(picPath);
 
 JLabel lab=new JLabel(icon,JLabel.CENTER);
