@@ -19,19 +19,19 @@ public class habitatmap extends JFrame {
 		ha=new Habitat(h);
 		switch (h) {
 		case 0:
-			picPath="assets/river.jpg";
+			picPath="src/assets/river.jpg";
 			break;
 		case 1:
-			picPath="G:"+File.separator+"1ѧϰ"+File.separator+"lo43"+File.separator+"lo43"+File.separator+"glassground.jpg";
+			picPath="src/assets/glassground.jpg";
 			break;
 		case 2:
-			picPath="G:"+File.separator+"1ѧϰ"+File.separator+"lo43"+File.separator+"lo43"+File.separator+"desert.jpg";
+			picPath="src/assets/desert.jpg";
 			break;
 		case 3:
-			picPath="G:"+File.separator+"1ѧϰ"+File.separator+"lo43"+File.separator+"lo43"+File.separator+"forest.jpg";
+			picPath="src/assets/forest.jpg";
 			break;
 		case 4:
-			picPath="G:"+File.separator+"1ѧϰ"+File.separator+"lo43"+File.separator+"lo43"+File.separator+"beach.jpg";
+			picPath="src/assets/beach.jpg";
 			break;
 		}
     this.setTitle("magical world");
@@ -84,7 +84,7 @@ public class habitatmap extends JFrame {
 	    }  
 	});
 	
-	JButton jb2 = new JButton("delet "+ha.sep(0)); 
+	JButton jb2 = new JButton("delete "+ha.sep(0));
 	jb2.setBounds(50,200,100,40);
 	lab.add(jb2);
 	jb2.addActionListener(new ActionListener() {
@@ -94,7 +94,7 @@ public class habitatmap extends JFrame {
 	    }  
 	});
 	
-	JButton jb3 = new JButton("delet "+ha.sep(1)); 
+	JButton jb3 = new JButton("delete "+ha.sep(1));
 	jb3.setBounds(50,250,100,40);
 	lab.add(jb3);
 	jb3.addActionListener(new ActionListener() {

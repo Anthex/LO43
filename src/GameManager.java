@@ -8,7 +8,7 @@ public class GameManager implements CharacterManager,UserInteractionManager,Even
 		playername=p;
 		nbr=0;
 		habitat[0]=new Habitat("river",0,0);
-		habitat[1]=new Habitat("glaceland",0,0);
+		habitat[1]=new Habitat("ice land",0,0);
 		habitat[2]=new Habitat("desert",0,0);
 		habitat[3]=new Habitat("forest",0,0);
 		habitat[4]=new Habitat("beach",0,0);
@@ -17,7 +17,7 @@ public class GameManager implements CharacterManager,UserInteractionManager,Even
 		playername=p;
 		nbr=0;
 		habitat[0]=new Habitat("river",0,0);
-		habitat[1]=new Habitat("glaceland",0,0);
+		habitat[1]=new Habitat("ice land",0,0);
 		habitat[2]=new Habitat("desert",0,0);
 		habitat[3]=new Habitat("forest",0,0);
 		habitat[4]=new Habitat("beach",0,0);

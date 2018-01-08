@@ -28,7 +28,7 @@ public class JFramelogin extends JFrame{
 	        contentPane.setLayout(new GridLayout(3,1,5,5));  
 	        JPanel pane1=new JPanel();  
 	        contentPane.add(pane1);  
-	        JLabel label1=new JLabel("username��");  
+	        JLabel label1=new JLabel("username");
 	        pane1.add(label1);  
 	        pane1.add(textField1);
 	        JButton another = new JButton("log in"); 
