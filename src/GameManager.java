@@ -1,6 +1,6 @@
-public class GameManager implements CharacterManager,UserInteractionManager,EventsManager{
+public class GameManager implements CharacterManager,UserInteractionManager {
 	private String playername;
-	private Character[] characters;
+	private Character[] characters=new Character[100];
 	private Habitat[] habitat=new Habitat[5];
 	int nbr;
 	
@@ -23,43 +23,12 @@ public class GameManager implements CharacterManager,UserInteractionManager,Even
 		habitat[4]=new Habitat("see",50,50,50,50);
 	}
 
-	public void populate() {}
-
 	public void loop() {}
 
 	public void generateEvents() {}
 
 	public void move() {}
 
-	public void addCharacter(Species s,int h,String na) {
-		Species expression = Species.angel;
-		switch(expression){
-			case angel:
-                Character d = new Character(75,25,50,25,na,s,h);
-				habitat[h].addchar(d);
-				characters[nbr]=d;
-				nbr++;
-				break;
-			case human:
-                Character c = new Character(50,50,50,50,na,s,h);
-       			habitat[h].addchar(c);
-       			characters[nbr]=c;
-       			nbr++;
-       			break;
-			case centaure:
-                Character f = new Character(25,75,75,75,na,s,h);
-       			habitat[h].addchar(f);
-       			characters[nbr]=f;
-       			nbr++;
-       			break;
-			case mermaid:
-                Character sh = new Character(25,75,25,50,na,s,h);
-              	habitat[h].addchar(sh);
-              	characters[nbr]=sh;
-              	nbr++;
-              	break;
-		}
-	}
 	public void changeTemp(int h, int temp) {
 		habitat[h].setTemp(temp);
 	}
@@ -84,7 +53,4 @@ public class GameManager implements CharacterManager,UserInteractionManager,Even
 
 	public void getCharacterByHabitats(Habitat h) {}
 
-	public void addCharacter(Species s, int h) {
-		
-	}
 }

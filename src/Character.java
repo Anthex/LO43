@@ -21,6 +21,25 @@ public class Character {
 		sp=c.sp;
 		ha=c.ha;
 	}
+	public Character(){
+		int j = (int) (Math.random() * 3);
+		switch (j){
+			case 0:
+				this.renew(new Character(75,25,50,25,Species.angel));
+				break;
+			case 1:
+				this.renew(new Character(50,50,50,50,Species.human));
+				break;
+			case 2:
+				this.renew(new Character(25,75,75,75,Species.centaure));
+				break;
+			case 3:
+				this.renew(new Character(75,25,25,50,Species.mermaid));
+				break;
+		}
+	}
+
+
 	public Character(int t,int h,int s,int e,String n,Species sp2,int h2){
 		temp=t;
 		humidity=h;
@@ -30,6 +49,7 @@ public class Character {
 		sp=sp2;
 		ha=h2;
 	}
+
 	public Character(int t,int h,int s, int e,Species sp2){
 		temp=t;
 		humidity=h;
@@ -54,9 +74,9 @@ public class Character {
               	break;
 		}
 	}
-	public void die() {}
+	public void die() {} //MVC
 
-	public void move(int x,int y) {}
+	public void move(int x,int y) {} //MVC
 
 	public int getTemp() {
 	        return temp;
@@ -122,7 +142,7 @@ public class Character {
 		return sp;
 	}
 
-	public void sethabitat(int h) {
+	public void setHabitat(int h) {
 		ha=h;
 	}
 

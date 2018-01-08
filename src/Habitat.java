@@ -1,12 +1,10 @@
 public class Habitat {
 	private String name;
-	private int upkeep=10;
 	private int temp;
 	private int humidity;
 	private int sleep;
 	private int energy;
 	private int nbr;
-	private Character [] chara=new Character[10];
 	private Species [] se=new Species[2];
 	
 	public Habitat(String n,int t,int h, int s, int e){
@@ -85,45 +83,11 @@ public class Habitat {
 	public void setSleep(int s){sleep=s;}
 
 	public void setEnergy(int e){energy=e;}
-
-	public void addchar(Character c){
-	    chara[nbr]= c;
-	    nbr++;
-	}
-
-	public String deletchara(Character c){
-		String s;
-	        if (nbr==0){
-			s= "Il y n'a pas d'individus";
-		}else{
-			int n=nbr;
-			for (int i=0; i<nbr; i++){
-				if (chara[i]==c){
-					for(int k=i; k<(nbr-1); k++)
-					       chara[k]=chara[k+1];
-				        nbr--;
-					break;
-			        }
-			}
-			if (n==nbr) s= "Il y n'a pas cet espèce";
-			else 
-		        s= "Success!";
-		}
-	        return s;
-	}
-
-	public Character getChara(int i){
-		 return chara[i];
-	}
-
 	public int getNbr(){return nbr;}
 
 	public void renew(Habitat h){
 		name=h.name;
 		nbr=h.nbr;
-		for(int i=0;i<nbr;i++){
-			chara[i].renew(h.chara[i]);
-		}
 	}
 
 	public Species sep(int i) {
