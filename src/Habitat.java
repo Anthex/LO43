@@ -5,6 +5,7 @@ public class Habitat {
 	private int sleep;
 	private int energy;
 	private int nbr;
+	private int id;
 	private Species [] se=new Species[2];
 	
 	public Habitat(String n,int t,int h, int s, int e){
@@ -17,6 +18,7 @@ public class Habitat {
 		
 	}
 	public Habitat(int h) {
+		id = h;
 		nbr=0;
 		switch(h) {
 		case 0:
@@ -84,7 +86,7 @@ public class Habitat {
 	public String getName(){return this.name;}
 	public void setEnergy(int e){energy=e;}
 	public int getNbr(){return nbr;}
-
+	public int getId(){return id;}
 	public void renew(Habitat h){
 		name=h.name;
 		nbr=h.nbr;

@@ -52,7 +52,7 @@ public class habitatmap extends JFrame {
 	Point p=new Point();
 	p.setLocation(280,180);
 	this.setLocation(p);
-		JButton jb0 = new JButton("add "+ha.sep(0));
+	JButton jb0 = new JButton("add "+ha.sep(0));
 	jb0.setBounds(50,100,100,40);
 	lab.add(jb0);
 

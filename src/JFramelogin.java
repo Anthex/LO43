@@ -45,6 +45,9 @@ public class JFramelogin extends JFrame{
 	 }
 	 public static void main(String[] args) {
 		    JFramelogin ma=new JFramelogin();
-		    ma.g.loop();
+		    while(ma.g == null); // wait for the gamemanager to be initialized
+		 	ma.g
+			ma.g.loop();
+
 	 }
 }

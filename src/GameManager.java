@@ -1,6 +1,8 @@
+import java.util.ArrayList;
+
 public class GameManager implements CharacterManager,UserInteractionManager {
 	private String playername;
-	private Character[] characters=new Character[100];
+	private ArrayList<Character> characters=new ArrayList<>(); // population limit
 	private habitatmap[] habitatsList=new habitatmap[5];
 	int nbr;
 	
@@ -32,8 +34,9 @@ public class GameManager implements CharacterManager,UserInteractionManager {
 		}
 
 		i=0;
-		for(i=0; i<100; i++){
-			generateEvents(characters[i]);
+		System.out.println("Generating events for " + characters.size() + " characters");
+		for(i=0; i< characters.size(); i++){
+			generateEvents(characters.get(i));
 		}
 	}
 
@@ -133,7 +136,7 @@ public class GameManager implements CharacterManager,UserInteractionManager {
 				}else{
 					h.setSleep(h.getSleep() - 20);
 				}
-				//mvc "les lumières de <habitat> ne s'éteigne plus, impossible de dormir"
+				//mvc "les lumières de <habitat> ne s'éteignent plus, impossible de dormir"
 				break;
 			case 6:
 				if((h.getEnergy() + 20) > 100){
@@ -154,7 +157,7 @@ public class GameManager implements CharacterManager,UserInteractionManager {
 		}
 	}
 
-	public void move() {}//mvc
+	public void move() {}
 	public habitatmap[] getHabitatsMaps(){
 		return habitatsList;
 	};
@@ -168,15 +171,27 @@ public class GameManager implements CharacterManager,UserInteractionManager {
 
 	public void changeEnergy(int h, int energy) { habitatsList[h].ha.setEnergy(energy); }
 
-	public void changeTemp() {}
+	public Character[] getCharacterBySpecies(Species spe) {
+		ArrayList<Character> out = new ArrayList<Character>();
+		for (Character chara : characters){
+			if (chara.getSp() == spe){
+				out.add(chara);
+			}
+		}
+		return out.toArray(new Character[]{});
+	}
 
-	public void changeHumidity() {}
+	public Character[] getCharacterByHabitats(Habitat h) {
+		ArrayList<Character> out = new ArrayList<Character>();
+		for (Character chara : characters){
+			if (chara.getHabitat() == h.getId()){
+				out.add(chara);
+			}
+		}
+		return out.toArray(new Character[]{});
+	}
 
-	public void changeSleep() {}
-
-	public void changeEnergy() {}
-	public void getCharacterBySpecies(Species spe) {}
-
-	public void getCharacterByHabitats(Habitat h) {}
-
+	public void createCharacter(){
+		//characters.add(new )
+	}
 }
