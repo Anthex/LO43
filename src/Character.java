@@ -3,7 +3,6 @@ public class Character {
 	private int humidity;
 	private int sleep;
 	private int energy;
-	private String name;
 	private int x,y;
 	private int age;
 	private Species sp;
@@ -14,7 +13,6 @@ public class Character {
 		humidity=c.humidity;
 		sleep=c.sleep;
 		energy=c.energy;
-		name=c.name;
 		age=c.age;
 		x=c.x;
 		y=c.y;
@@ -25,27 +23,30 @@ public class Character {
 		int j = (int) (Math.random() * 3);
 		switch (j){
 			case 0:
-				this.renew(new Character(75,25,50,25,Species.angel));
+				int i = (int) (Math.random() * 4);
+				this.renew(new Character(75,25,50,25,Species.angel,i));
 				break;
 			case 1:
-				this.renew(new Character(50,50,50,50,Species.human));
+				int i = (int) (Math.random() * 4);
+				this.renew(new Character(50,50,50,50,Species.human,i));
 				break;
 			case 2:
-				this.renew(new Character(25,75,75,75,Species.centaure));
+				int i = (int) (Math.random() * 4);
+				this.renew(new Character(25,75,75,75,Species.centaure,i));
 				break;
 			case 3:
-				this.renew(new Character(75,25,25,50,Species.mermaid));
+				int i = (int) (Math.random() * 4);
+				this.renew(new Character(75,25,25,50,Species.mermaid,i));
 				break;
 		}
 	}
 
 
-	public Character(int t,int h,int s,int e,String n,Species sp2,int h2){
+	public Character(int t,int h,int s,int e,Species sp2,int h2){
 		temp=t;
 		humidity=h;
 		sleep=s;
 		energy=e;
-		name=n;
 		sp=sp2;
 		ha=h2;
 	}
@@ -104,15 +105,9 @@ public class Character {
 
 	public int getEnergy() { return energy; }
 
+	public int getHabitat() { return ha;}
+
 	public void setEnergy(int energy) { this.energy = energy; }
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String n) {
-		this.name = n;
-	}
 
 	public int getX() {
 	        return x;

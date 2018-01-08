@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_vivarium" default="compile.module.vivarium">
+  <dirname property="module.vivarium.basedir" file="${ant.file.module_vivarium}"/>
+  
+  <property name="module.jdk.home.vivarium" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.vivarium" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.vivarium" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.vivarium" value="-encoding UTF-8 -source 1.8 -target 1.8 ${compiler.args}"/>
+  
+  <property name="vivarium.output.dir" value="${module.vivarium.basedir}/out/production/vivarium"/>
+  <property name="vivarium.testoutput.dir" value="${module.vivarium.basedir}/out/test/vivarium"/>
+  
+  <path id="vivarium.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="vivarium.module.production.classpath">
+    <path refid="${module.jdk.classpath.vivarium}"/>
+  </path>
+  
+  <path id="vivarium.runtime.production.module.classpath">
+    <pathelement location="${vivarium.output.dir}"/>
+  </path>
+  
+  <path id="vivarium.module.classpath">
+    <path refid="${module.jdk.classpath.vivarium}"/>
+    <pathelement location="${vivarium.output.dir}"/>
+  </path>
+  
+  <path id="vivarium.runtime.module.classpath">
+    <pathelement location="${vivarium.testoutput.dir}"/>
+    <pathelement location="${vivarium.output.dir}"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.vivarium">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.vivarium">
+    <patternset refid="excluded.from.module.vivarium"/>
+  </patternset>
+  
+  <path id="vivarium.module.sourcepath">
+    <dirset dir="${module.vivarium.basedir}">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.vivarium" depends="compile.module.vivarium.production,compile.module.vivarium.tests" description="Compile module vivarium"/>
+  
+  <target name="compile.module.vivarium.production" depends="register.custom.compilers" description="Compile module vivarium; production classes">
+    <mkdir dir="${vivarium.output.dir}"/>
+    <javac2 destdir="${vivarium.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.vivarium}/javac">
+      <compilerarg line="${compiler.args.vivarium}"/>
+      <bootclasspath refid="vivarium.module.bootclasspath"/>
+      <classpath refid="vivarium.module.production.classpath"/>
+      <src refid="vivarium.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.vivarium"/>
+    </javac2>
+    
+    <copy todir="${vivarium.output.dir}">
+      <fileset dir="${module.vivarium.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.vivarium.tests" depends="register.custom.compilers,compile.module.vivarium.production" description="compile module vivarium; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.vivarium" description="cleanup module">
+    <delete dir="${vivarium.output.dir}"/>
+    <delete dir="${vivarium.testoutput.dir}"/>
+  </target>
+</project>

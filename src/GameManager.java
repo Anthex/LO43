@@ -23,11 +23,61 @@ public class GameManager implements CharacterManager,UserInteractionManager {
 		habitat[4]=new Habitat("see",50,50,50,50);
 	}
 
-	public void loop() {}
+	public void loop() {
+		int i=0;
+		for(i=0; i<100; i++){
+			generateEvents(characters[i]);
+		}
+	}
 
-	public void generateEvents() {}
+	public void generateEvents(Character c) {
+		int t = Math.random()*100 + (habitat[c.getHabitat()].getTemp() - c.getTemp();
 
-	public void move() {}
+		if(t<20){
+			c.die();
+		}else if(t>80){
+			c.die();
+		}else if(t<30){
+			// MVC "Un <espece> est mort de froid"
+		}else if(t>70){
+			//MVC "Un <espece> est mort de chaud"
+		}
+		int h = Math.random()*100 + (habitat[c.getHabitat()].getHumidity() - c.getHumidity();
+
+		if(h<20){
+			c.die();
+		}else if(h>80){
+			c.die();
+		}else if(h<30){
+			// MVC "Un >espece> s'est déshydraté"
+		}else if(h>70){
+			//MVC "Un <espece> s'est noyé"
+		}
+		int s = Math.random()*100 + (habitat[c.getHabitat()].getSleep() - c.getSleep();
+
+		if(s<20){
+			c.die();
+		}else if(s>80){
+			c.die();
+		}else if(s<30){
+			// MVC "Un <espece> est mort de fatigue"
+		}else if(s>70){
+			//MVC "Un <espece> est mort dans son sommeil"
+		}
+		int e = Math.random()*100 + (habitat[c.getHabitat()].getEnergy() - c.getEnergy();
+
+		if(e<20){
+			c.die();
+		}else if(e>80){
+			c.die();
+		}else if(e<30){
+			// MVC "Un <espece> est mort de faim"
+		}else if(e>70){
+			//MVC "Un <espece> a fait une indigestion"
+		}
+	}
+
+	public void move() {}//mvc
 
 	public void changeTemp(int h, int temp) {
 		habitat[h].setTemp(temp);
