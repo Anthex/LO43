@@ -8,7 +8,7 @@ public class Character {
 	private int x,y;
 	private int age;
 	private Species s;
-	private Habitat ha;
+	private int ha;
 	
 	public void renew(Character c){
 		temp=c.temp;
@@ -21,13 +21,55 @@ public class Character {
 		s=c.s;
 		ha=c.ha;
 	}
-	public Character(int t,int h,int l,String n,Species sp,Habitat hab){
+	public Character(int t,int h,int l,String n,Species sp,int h2){
 		temp=t;
 		humidity=h;
 		life=l;
 		name=n;
 		s=sp;
-		ha=hab;
+		ha=h2;
+	}
+	public Character(int t,int h,int l,Species sp){
+		temp=t;
+		humidity=h;
+		life=l;
+		s=sp;
+	}
+	public Character(Species s) {
+		Species expression = s;
+		switch(expression){
+                   case dog:
+                this.renew(new Character(30,10,0,s));
+				break;
+                   case cat:
+                       this.renew(new Character(30,10,0,s));
+       			break;
+                   case fish:
+                       this.renew(new Character(10,80,0,s));
+       			break;
+                   case shell:
+                       this.renew(new Character(10,80,0,s));
+              	break;
+                   case starfish:
+                       this.renew(new Character(10,80,0,s));
+                break;
+                   case turtle:
+                       this.renew(new Character(10,80,0,s));
+                break;
+                   case lion:
+                       this.renew(new Character(20,10,0,s));
+                break;
+                   case tiger:
+                       this.renew(new Character(20,10,0,s));
+                break;
+                case camel:
+                       this.renew(new Character(40,5,0,s));
+                break;
+                case snake:
+                      this.renew(new Character(40,5,0,s));
+                break;
+          
+		}
 	}
 	public void die() {}
 	public void move(int x,int y) {}
@@ -76,7 +118,7 @@ public class Character {
 	public Species getsp() {
 		return s;
 	}
-	public void sethabitat(Habitat h) {
+	public void sethabitat(int h) {
 		ha=h;
 	}
 

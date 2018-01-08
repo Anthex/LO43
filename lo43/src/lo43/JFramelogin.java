@@ -6,26 +6,24 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;  
 import javax.swing.JTextField;  
 import javax.swing.border.EmptyBorder; 
-import java.awt.BorderLayout;   
-import java.awt.Container;   
+   
 import java.awt.event.ActionEvent;   
 import java.awt.event.ActionListener;   
-import java.awt.event.InputEvent;   
-import java.awt.event.MouseAdapter;   
-import java.awt.event.MouseEvent;   
-import java.awt.event.MouseListener;   
+  
 import javax.swing.JButton;     
-import javax.swing.SwingUtilities;
+ 
 
 public class JFramelogin extends JFrame{
-	  String na;
+	GameManager g;
+	marche ma=new marche();
 	 public JFramelogin() {
 		   
 		   this.setTitle("log in");
 		   this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);    
-	       this.setBounds(300, 250, 400, 400);   
+	       this.setBounds(300, 250, 400, 300);   
 	       JTextField  textField1=new JTextField();  
 	         textField1.setColumns(10); 
+	         textField1.setLocation(120, 95);
 	        JPanel contentPane=new JPanel();  
 	        contentPane.setBorder(new EmptyBorder(5,5,5,5));  
 	        this.setContentPane(contentPane);  
@@ -34,23 +32,23 @@ public class JFramelogin extends JFrame{
 	        contentPane.add(pane1);  
 	        JLabel label1=new JLabel("username£º");  
 	        pane1.add(label1);  
-	        pane1.add(textField1); 
-			 ActionListener actionListener = new ActionListener() {   
-			        public void actionPerformed(ActionEvent actionEvent) {   
-			          na=textField1.getText();
-			          this.
-			        }   
-			 };
+	        pane1.add(textField1);
+	        JButton another = new JButton("log in"); 
+	        another.setBounds(120,85,100,50);
+	        contentPane.add(another);
+	        another.addActionListener(new ActionListener() {
+	            public void actionPerformed(ActionEvent e) {  
+	            	String na=textField1.getText();
+	            	g=new GameManager(na);
+	            	dispose();
+	            	ma.setVisible(true);
+	            }  
+	        });
 	        this.setVisible(true); 
 	 }
-	 public String name() {return na;}
 	 public static void main(String[] args) {
-		 JFramelogin jfb=new JFramelogin();
-		 ActionListener actionListener = new ActionListener() {   
-		        public void actionPerformed(ActionEvent actionEvent) {   
-		          System.out.println("I was selected.");   
-		        }   
-		 }
-		 }
-
+		    JFramelogin ma=new JFramelogin();
+		    
+		    
+		 	 }
 }
