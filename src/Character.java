@@ -4,7 +4,6 @@ public class Character {
 	private int sleep;
 	private int energy;
 	private int x,y;
-	private int age;
 	private Species sp;
 	private int ha;
 	
@@ -13,7 +12,6 @@ public class Character {
 		humidity=c.humidity;
 		sleep=c.sleep;
 		energy=c.energy;
-		age=c.age;
 		x=c.x;
 		y=c.y;
 		sp=c.sp;
@@ -23,20 +21,44 @@ public class Character {
 		int j = (int) (Math.random() * 3);
 		switch (j){
 			case 0:
-				int k = (int) (Math.random() * 4);
-				this.renew(new Character(75,25,50,25,Species.angel,k));
+				temp=75;
+				humidity=25;
+				sleep=50;
+				energy=25;
+				x=0;
+				y=0;
+				sp=Species.angel;
+				ha=(int) (Math.random() * 4);
 				break;
 			case 1:
-				int k = (int) (Math.random() * 4);
-				this.renew(new Character(50,50,50,50,Species.human,k));
+				temp=50;
+				humidity=50;
+				sleep=50;
+				energy=50;
+				x=0;
+				y=0;
+				sp=Species.human;
+				ha=(int) (Math.random() * 4);
 				break;
 			case 2:
-				int k = (int) (Math.random() * 4);
-				this.renew(new Character(25,75,75,75,Species.centaure,k));
+				temp=25;
+				humidity=75;
+				sleep=75;
+				energy=75;
+				x=0;
+				y=0;
+				sp=Species.centaure;
+				ha=(int) (Math.random() * 4);
 				break;
 			case 3:
-				int k = (int) (Math.random() * 4);
-				this.renew(new Character(75,25,25,50,Species.mermaid,k));
+				temp=75;
+				humidity=25;
+				sleep=25;
+				energy=50;
+				x=0;
+				y=0;
+				sp=Species.mermaid;
+				ha=(int) (Math.random() * 4);
 				break;
 		}
 	}
@@ -123,14 +145,6 @@ public class Character {
 
 	public void setY(int y) {
 		this.y = y;
-	}
-
-	public int getAge() {
-	        return age;
-	}
-
-	public void setAge(int age) {
-		this.age = age;
 	}
 
 	public Species getSp() {
