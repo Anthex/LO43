@@ -85,7 +85,7 @@ public class Character {
 	public int getEnergy() { return energy; }
 
 	public void setEnergy(int energy) { this.energy = energy; }
-	
+
 	public String getName() {
 		return name;
 	}

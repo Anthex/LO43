@@ -27,69 +27,32 @@ public class GameManager implements CharacterManager,UserInteractionManager,Even
 	public void generateEvents() {}
 	public void move() {}
 	public void addCharacter(Species s,int h,String na) {
-		Species expression = Species.dog;
+		Species expression = Species.angel;
 		switch(expression){
-                   case dog:
-                Character d = new Character(30,10,0,na,s,h); /*ǰ�����¶ȣ�ʪ�ȣ�����*/
+			case angel:
+                Character d = new Character(75,25,50,25,na,s,h);
 				habitat[h].addchar(d);
 				characters[nbr]=d;
 				nbr++;
 				break;
-                   case cat:
-                Character c = new Character(30,10,0,na,s,h); /*ǰ�����¶ȣ�ʪ�ȣ�����*/
+			case human:
+                Character c = new Character(50,50,50,50,na,s,h); /*ǰ�����¶ȣ�ʪ�ȣ�����*/
        			habitat[h].addchar(c);
        			characters[nbr]=c;
        			nbr++;
        			break;
-                   case fish:
-                Character f = new Character(10,80,0,na,s,h); /*ǰ�����¶ȣ�ʪ�ȣ�����*/
+			case centaure:
+                Character f = new Character(25,75,75,75,na,s,h); /*ǰ�����¶ȣ�ʪ�ȣ�����*/
        			habitat[h].addchar(f);
        			characters[nbr]=f;
        			nbr++;
        			break;
-                   case shell:
-                Character sh = new Character(10,80,0,na,s,h); /*ǰ�����¶ȣ�ʪ�ȣ�����*/
+			case mermaid:
+                Character sh = new Character(25,75,25,50,na,s,h); /*ǰ�����¶ȣ�ʪ�ȣ�����*/
               	habitat[h].addchar(sh);
               	characters[nbr]=sh;
               	nbr++;
               	break;
-                   case starfish:
-                Character st = new Character(10,80,0,na,s,h); /*ǰ�����¶ȣ�ʪ�ȣ�����*/
-                habitat[h].addchar(st);
-                characters[nbr]=st;
-                nbr++;
-                break;
-                   case turtle:
-                Character tu = new Character(10,80,0,na,s,h); /*ǰ�����¶ȣ�ʪ�ȣ�����*/
-                habitat[h].addchar(tu);
-                characters[nbr]=tu;
-                nbr++;
-                break;
-                   case lion:
-                Character li = new Character(20,10,0,na,s,h); /*ǰ�����¶ȣ�ʪ�ȣ�����*/
-                habitat[h].addchar(li);
-                characters[nbr]=li;
-                nbr++;
-                break;
-                   case tiger:
-                Character ti = new Character(20,10,0,na,s,h); /*ǰ�����¶ȣ�ʪ�ȣ�����*/
-                habitat[h].addchar(ti);
-                characters[nbr]=ti;
-                nbr++;
-                break;
-                   case camel:
-                Character ca = new Character(40,5,0,na,s,h); /*ǰ�����¶ȣ�ʪ�ȣ�����*/
-                habitat[h].addchar(ca);
-                characters[nbr]=ca;
-                nbr++;
-                break;
-                   case snake:
-                Character sn = new Character(40,5,0,na,s,h); /*ǰ�����¶ȣ�ʪ�ȣ�����*/
-                habitat[h].addchar(sn);
-                characters[nbr]=sn;
-                nbr++;
-                break;
-          
 		}
 	}
 	public void changeTemp(int h, int temp) {
