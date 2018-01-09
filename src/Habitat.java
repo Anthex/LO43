@@ -62,9 +62,9 @@ public class Habitat {
                 name = "sea";
                 se[0] = Species.mermaid;
                 se[1] = Species.human;
-                temp = 50;
+                temp = 35;
                 humidity = 50;
-                sleep = 50;
+                sleep = 30;
                 energy = 50;
                 break;
 

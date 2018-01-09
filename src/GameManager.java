@@ -42,7 +42,7 @@ public class GameManager implements CharacterManager, UserInteractionManager {
 	*/
 
     public void loop() {
-        System.out.println("\n\n << Generating events for " + characters.size() + " characters >>");
+        System.out.println("\n\n << Génération des évènements pour " + characters.size() + " entités >>");
         int i = 0;
         for (i = 0; i < 5; i++) {
             generateEvents(habitatsList[i].ha); //ha = habitat of the habitatmap
@@ -62,20 +62,19 @@ public class GameManager implements CharacterManager, UserInteractionManager {
         if (t < 0) {
             characters.remove(c);
             c.die();
-            System.out.println("(!) Un " + c.getSp().toString() + " est mort dans " + habitatsList[c.getHabitat()].ha.getName());
+            System.out.println("(!) Un " + c.getSp().toString() + " est mort d'hypothermie dans " + habitatsList[c.getHabitat()].ha.getName());
         } else if (t > 125) {
             characters.remove(c);
             c.die();
-            System.out.println("(!) Un " + c.getSp().toString() + " est mort dans " + habitatsList[c.getHabitat()].ha.getName());
+            System.out.println("(!) Un " + c.getSp().toString() + " est mort d'hyperthermie dans " + habitatsList[c.getHabitat()].ha.getName());
         }
 
-        /*
         int s = (int) (Math.random() * 100 + (habitatsList[c.getHabitat()].ha.getSleep() - c.getSleep()));
-        if (s < -10) {
+        if (s < -20) {
             characters.remove(c);
-            System.out.println("(!) Un " + c.getSp().toString() + " est mort dans " + habitatsList[c.getHabitat()].ha.getName());
+            System.out.println("(!) Un " + c.getSp().toString() + " est mort de fatigue dans " + habitatsList[c.getHabitat()].ha.getName());
         }
-
+        /*
         int h = (int) (Math.random() * 100 + (habitatsList[c.getHabitat()].ha.getHumidity() - c.getHumidity()));
         if (h < -20) {
             characters.remove(c);
@@ -97,7 +96,7 @@ public class GameManager implements CharacterManager, UserInteractionManager {
     }
 
     public void generateEvents(Habitat h) {
-        int i = (int) (Math.random() * 21);
+        int i = (int) (Math.random() * 40);
         switch (i) {
             case 0:
                 if ((h.getTemp() + 20) > 100) {

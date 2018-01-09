@@ -23,15 +23,16 @@ public class JFramelogin extends JFrame {
         contentPane.setLayout(new GridLayout(3, 1, 5, 5));
         JPanel pane1 = new JPanel();
         contentPane.add(pane1);
-        JLabel label1 = new JLabel("Username (optional) :");
+        JLabel label1 = new JLabel("Nom d'utilisateur (optional) :");
+        textField1.setText("Joueur 1");
         pane1.add(label1);
         pane1.add(textField1);
-        JLabel label2 = new JLabel("How many entities do you want to create?");
+        JLabel label2 = new JLabel("Combien d'entitées voulez-vous créer?");
         pane1.add(label2);
         spin = new JSpinner();
         spin.setValue(20);
         pane1.add(spin);
-        JButton another = new JButton("Start simulation");
+        JButton another = new JButton("Débuter la simulation");
         another.setBounds(120, 85, 100, 50);
         contentPane.add(another);
         another.addActionListener(new ActionListener() {

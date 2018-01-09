@@ -19,7 +19,7 @@ public class Character {
     }
 
     public Character() {
-        int j = (int) (Math.random() * 3);
+        int j = (int) (Math.random() * 4);
         switch (j) {
             case 0:
                 temp = 75;
@@ -72,9 +72,9 @@ public class Character {
                 }
                 break;
             case 3:
-                temp = 75;
-                humidity = 25;
-                sleep = 25;
+                temp = 35;
+                humidity = 50;
+                sleep = 30;
                 energy = 50;
                 x = (int) (Math.random() * 800);
                 y = (int) (Math.random() * 450);
