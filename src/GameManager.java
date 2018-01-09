@@ -59,12 +59,14 @@ public class GameManager implements CharacterManager, UserInteractionManager {
         int t = (int) (Math.random() * 100 + (habitatsList[c.getHabitat()].ha.getTemp() - c.getTemp()));
 
         //GENERATE DYING EVENT
-        if (t < 5) {
+        if (t < 0) {
             characters.remove(c);
-            System.out.println("(!) aUn " + c.getSp().toString() + " est mort dans " + habitatsList[c.getHabitat()].ha.getName());
-        } else if (t > 95) {
+            c.die();
+            System.out.println("(!) Un " + c.getSp().toString() + " est mort dans " + habitatsList[c.getHabitat()].ha.getName());
+        } else if (t > 125) {
             characters.remove(c);
-            System.out.println("(!)b Un " + c.getSp().toString() + " est mort dans " + habitatsList[c.getHabitat()].ha.getName());
+            c.die();
+            System.out.println("(!) Un " + c.getSp().toString() + " est mort dans " + habitatsList[c.getHabitat()].ha.getName());
         }
 
         /*

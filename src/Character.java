@@ -173,7 +173,13 @@ public class Character {
         this.x += (int)(Math.random() * 20)-10;
         this.y += (int)(Math.random() * 20)-10;
     }
+    void die(){
+        this.energy=0;
+    }
 
+    boolean isAlive(){
+        return (this.energy>0);
+    }
     public int getTemp() {
         return temp;
     }

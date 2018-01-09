@@ -134,33 +134,35 @@ public class habitatmap extends JFrame {
         //Clear sprites
         for (JLabel current:sprites){
             this.remove(current);
+            current = new JLabel();
         }
         sprites.clear();
-        for(Character localChar:localCharacters){
-            JLabel character=null;
-            Species expression = localChar.getSp();
-            switch (expression) {
-                case human:
-                    character  = new JLabel(human);
-                    break;
-                case angel:
-                    character  = new JLabel(angel);
-                    break;
-                case centaur:
-                    character  = new JLabel(centaur);
-                    break;
-                case mermaid:
-                    character  = new JLabel(mermaid);
-                    break;
+        for(Character localChar:localCharacters) {
+            if (localChar.isAlive()) {
+                JLabel character = null;
+                Species expression = localChar.getSp();
+                switch (expression) {
+                    case human:
+                        character = new JLabel(human);
+                        break;
+                    case angel:
+                        character = new JLabel(angel);
+                        break;
+                    case centaur:
+                        character = new JLabel(centaur);
+                        break;
+                    case mermaid:
+                        character = new JLabel(mermaid);
+                        break;
+                }
+                this.add(character);
+                sprites.add(character);
+                Dimension size = character.getPreferredSize();
+                character.setBounds(0, 0, size.width, size.height);
+                character.setLocation(localChar.getX(), localChar.getY());
             }
-            this.add(character);
-            sprites.add(character);
-            Dimension size = character.getPreferredSize();
-            character.setBounds(0, 0, size.width, size.height);
-            character.setLocation(localChar.getX(),localChar.getY());
+            this.add(lab);
         }
-        this.add(lab);
-
-       panel.validate();
+        this.validate();
     }
 }

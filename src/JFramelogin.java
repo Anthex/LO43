@@ -59,7 +59,7 @@ public class JFramelogin extends JFrame {
             startWindow.g.loop();
             startWindow.g.updateAllLocalCharacters();
             try {
-                Thread.sleep(2000);
+                Thread.sleep(1000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
