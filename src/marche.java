@@ -15,15 +15,10 @@ public class marche extends JFrame {
         this.setTitle("World Map");
         String picPath = "src/assets/map.jpg";
         Icon icon = new ImageIcon(picPath);
-
         JLabel lab = new JLabel(icon, JLabel.CENTER);
-
         Font font = new Font("����", Font.ITALIC + Font.BOLD, 28);
-
         lab.setForeground(Color.RED);
-
         lab.setBackground(Color.YELLOW);
-
         lab.setFont(font);
 
         this.add(lab);

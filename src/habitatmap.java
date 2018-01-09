@@ -125,7 +125,7 @@ public class habitatmap extends JFrame {
         ImageIcon human = new ImageIcon("src/assets/char/human.png");
         ImageIcon centaur = new ImageIcon("src/assets/char/centaur.png");
         ImageIcon angel = new ImageIcon("src/assets/char/angel.png");
-        ImageIcon mermaid = new ImageIcon("src/assets/char/mermaid.jpg");
+        ImageIcon mermaid = new ImageIcon("src/assets/char/mermaid.png");
         JPanel panel = (JPanel) this.getContentPane();
         panel.setBounds(0, 0, 900, 510);
         panel.setBackground(new Color(0,0,0,0));

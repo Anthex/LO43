@@ -53,7 +53,6 @@ public class JFramelogin extends JFrame {
         while (!startWindow.ma.isVisible())
             ; //make sure the component is initialized in order to avoid aborting the program on main loop
 
-
         // MAIN LOOP CALL
         while (startWindow.g.getPopulation() > 0 && startWindow.ma.isVisible()) {
             startWindow.g.loop();
