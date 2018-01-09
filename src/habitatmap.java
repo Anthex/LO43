@@ -53,9 +53,6 @@ public class habitatmap extends JFrame {
         this.setTitle("World");
 
         icon = new ImageIcon(getClass().getResource(picPath));
-
-
-
         lab = new JLabel(icon, JLabel.CENTER);
         lab.setBounds(0,0,900,510);
         this.add(lab);
