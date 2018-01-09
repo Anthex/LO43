@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="vivarium:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="2b911509-36e3-4ae7-8935-3c27824e3a63" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Character.java" afterPath="$PROJECT_DIR$/src/Character.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GameManager.java" afterPath="$PROJECT_DIR$/src/GameManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Habitat.java" afterPath="$PROJECT_DIR$/src/Habitat.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/vivarium/habitatmap.class" afterPath="$PROJECT_DIR$/out/production/vivarium/habitatmap.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/JFramelogin.java" afterPath="$PROJECT_DIR$/src/JFramelogin.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/habitatmap.java" afterPath="$PROJECT_DIR$/src/habitatmap.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/marche.java" afterPath="$PROJECT_DIR$/src/marche.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,11 +27,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Character.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Character.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Character.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="33" column="19" lean-forward="true" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
+            <state relative-caret-position="1540">
+              <caret line="132" column="51" lean-forward="false" selection-start-line="132" selection-start-column="51" selection-end-line="132" selection-end-column="51" />
               <folding>
                 <element signature="e#4993#4994#0" expanded="true" />
                 <element signature="e#5022#5023#0" expanded="true" />
@@ -38,8 +45,8 @@
       <file leaf-file-name="habitatmap.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/habitatmap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="24">
-              <caret line="142" column="55" lean-forward="true" selection-start-line="142" selection-start-column="55" selection-end-line="142" selection-end-column="55" />
+            <state relative-caret-position="2460">
+              <caret line="160" column="30" lean-forward="true" selection-start-line="160" selection-start-column="30" selection-end-line="160" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -57,11 +64,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JFramelogin.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="JFramelogin.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/JFramelogin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="67" column="80" lean-forward="true" selection-start-line="67" selection-start-column="80" selection-end-line="67" selection-end-column="80" />
+            <state relative-caret-position="165">
+              <caret line="57" column="53" lean-forward="false" selection-start-line="57" selection-start-column="53" selection-end-line="57" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -83,7 +90,7 @@
         <entry file="file://$PROJECT_DIR$/src/marche.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
-              <caret line="16" column="43" lean-forward="false" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
+              <caret line="19" column="33" lean-forward="false" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -133,9 +140,12 @@
       <find>see</find>
       <find>merma</find>
       <find>crea</find>
-      <find>log</find>
       <find>die</find>
       <find>genera</find>
+      <find>path</find>
+      <find>log</find>
+      <find>picpa</find>
+      <find>asser</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -150,12 +160,12 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/Species.java" />
-        <option value="$PROJECT_DIR$/src/marche.java" />
-        <option value="$PROJECT_DIR$/src/habitatmap.java" />
-        <option value="$PROJECT_DIR$/src/JFramelogin.java" />
         <option value="$PROJECT_DIR$/src/Habitat.java" />
         <option value="$PROJECT_DIR$/src/GameManager.java" />
         <option value="$PROJECT_DIR$/src/Character.java" />
+        <option value="$PROJECT_DIR$/src/marche.java" />
+        <option value="$PROJECT_DIR$/src/habitatmap.java" />
+        <option value="$PROJECT_DIR$/src/JFramelogin.java" />
       </list>
     </option>
   </component>
@@ -166,8 +176,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="854" />
-    <option name="y" value="-44" />
+    <option name="x" value="974" />
+    <option name="y" value="-48" />
     <option name="width" value="692" />
     <option name="height" value="392" />
   </component>
@@ -217,6 +227,9 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -338,12 +351,12 @@
       <option name="presentableId" value="Default" />
       <updated>1515444454454</updated>
       <workItem from="1515444463617" duration="14047000" />
-      <workItem from="1515484101408" duration="5780000" />
+      <workItem from="1515484101408" duration="9386000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28777000" />
+    <option name="totallyTimeSpent" value="32383000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1513" height="983" extended-state="6" />
@@ -428,17 +441,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/GameManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="901">
-          <caret line="55" column="1" lean-forward="true" selection-start-line="55" selection-start-column="1" selection-end-line="55" selection-end-column="1" />
-          <folding>
-            <element signature="e#7182#7193#0" expanded="true" />
-            <element signature="e#7854#7865#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Habitat.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1649">
@@ -747,39 +749,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/marche.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="16" column="43" lean-forward="false" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_131/src.zip!/javax/swing/plaf/basic/BasicButtonListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3689">
           <caret line="251" column="0" lean-forward="false" selection-start-line="251" selection-start-column="0" selection-end-line="251" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/habitatmap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="142" column="55" lean-forward="true" selection-start-line="142" selection-start-column="55" selection-end-line="142" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/JFramelogin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="67" column="80" lean-forward="true" selection-start-line="67" selection-start-column="80" selection-end-line="67" selection-end-column="80" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -799,6 +773,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="uml://JAVA/JFramelogin">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>JFramelogin</OriginalElement>
+          <nodes>
+            <node x="" y="">java.awt.Frame</node>
+            <node x="" y="">JFramelogin</node>
+            <node x="" y="">java.awt.Window</node>
+            <node x="" y="">java.awt.MenuContainer</node>
+            <node x="" y="">javax.swing.TransferHandler.HasGetTransferHandler</node>
+            <node x="" y="">javax.swing.RootPaneContainer</node>
+            <node x="" y="">javax.accessibility.Accessible</node>
+            <node x="" y="">java.awt.Component</node>
+            <node x="" y="">java.awt.image.ImageObserver</node>
+            <node x="" y="">java.io.Serializable</node>
+            <node x="" y="">java.awt.Container</node>
+            <node x="" y="">javax.swing.JFrame</node>
+            <node x="" y="">javax.swing.WindowConstants</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="382.5" y="251.5" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/GameManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -812,8 +816,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Character.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="33" column="19" lean-forward="true" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
+        <state relative-caret-position="1540">
+          <caret line="132" column="51" lean-forward="false" selection-start-line="132" selection-start-column="51" selection-end-line="132" selection-end-column="51" />
           <folding>
             <element signature="e#4993#4994#0" expanded="true" />
             <element signature="e#5022#5023#0" expanded="true" />
@@ -823,5 +827,109 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/marche.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="19" column="33" lean-forward="false" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/habitatmap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2460">
+          <caret line="160" column="30" lean-forward="true" selection-start-line="160" selection-start-column="30" selection-end-line="160" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/JFramelogin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="57" column="53" lean-forward="false" selection-start-line="57" selection-start-column="53" selection-end-line="57" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>vivarium:jar</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>vivarium</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

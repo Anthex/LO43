@@ -17,34 +17,42 @@ public class habitatmap extends JFrame {
     JButton jb0, jb1, jb2, jb3;
     JLabel lab;
     Icon icon;
+    ImageIcon human;
+    ImageIcon centaur;
+    ImageIcon angel;
+    ImageIcon mermaid;
     ArrayList<JLabel> sprites;
     ArrayList<Character> localCharacters;
     ArrayList<Character> globalCharactersReference; //used to add new characters
     public habitatmap(int h,  ArrayList<Character> refToCharacters) {
+        human = new ImageIcon(getClass().getResource("assets/char/human.png"));
+        centaur = new ImageIcon(getClass().getResource("assets/char/centaur.png"));
+        angel = new ImageIcon(getClass().getResource("assets/char/angel.png"));
+        mermaid = new ImageIcon(getClass().getResource("assets/char/mermaid.png"));
         localCharacters = new ArrayList<>();
         sprites = new ArrayList<>();
         String picPath = null;
         ha = new Habitat(h);
         switch (h) {
             case 0:
-                picPath = "src/assets/sky.jpg";
+                picPath = "assets/sky.jpg";
                 break;
             case 1:
-                picPath = "src/assets/glassground.jpg";
+                picPath = "assets/glassground.jpg";
                 break;
             case 2:
-                picPath = "src/assets/beach.jpg";
+                picPath = "assets/beach.jpg";
                 break;
             case 3:
-                picPath = "src/assets/forest.jpg";
+                picPath = "assets/forest.jpg";
                 break;
             case 4:
-                picPath = "src/assets/sea.jpg";
+                picPath = "assets/sea.jpg";
                 break;
         }
         this.setTitle("World");
 
-        icon = new ImageIcon(picPath);
+        icon = new ImageIcon(getClass().getResource(picPath));
 
 
 
@@ -122,10 +130,7 @@ public class habitatmap extends JFrame {
 
 
     public void updateGraphics(){
-        ImageIcon human = new ImageIcon("src/assets/char/human.png");
-        ImageIcon centaur = new ImageIcon("src/assets/char/centaur.png");
-        ImageIcon angel = new ImageIcon("src/assets/char/angel.png");
-        ImageIcon mermaid = new ImageIcon("src/assets/char/mermaid.png");
+
         JPanel panel = (JPanel) this.getContentPane();
         panel.setBounds(0, 0, 900, 510);
         panel.setBackground(new Color(0,0,0,0));

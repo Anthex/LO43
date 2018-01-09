@@ -13,8 +13,9 @@ public class marche extends JFrame {
         habitatmap h3 = habitatsList[3];
         habitatmap h4 = habitatsList[4];
         this.setTitle("World Map");
-        String picPath = "src/assets/map.jpg";
-        Icon icon = new ImageIcon(picPath);
+        this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        String picPath = "assets/map.jpg";
+        Icon icon = new ImageIcon(getClass().getResource(picPath));
         JLabel lab = new JLabel(icon, JLabel.CENTER);
         Font font = new Font("����", Font.ITALIC + Font.BOLD, 28);
         lab.setForeground(Color.RED);
