@@ -61,7 +61,7 @@ public class JFramelogin extends JFrame {
             startWindow.g.loop();
             startWindow.g.updateAllLocalCharacters();
             try {
-                Thread.sleep(1000);
+                Thread.sleep(500);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

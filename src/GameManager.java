@@ -58,11 +58,11 @@ public class GameManager implements CharacterManager, UserInteractionManager {
     public void generateEvents(Character c) {
         int t = (int) (Math.random() * 100 + (habitatsList[c.getHabitat()].ha.getTemp() - c.getTemp()));
 
-        if (t < 10) {
+        if (t < 15) {
             c.die();
             characters.remove(c);
             System.out.println("(!) Un " + c.getSp().toString() + " est mort dans " + habitatsList[c.getHabitat()].ha.getName());
-        } else if (t > 90) {
+        } else if (t > 85) {
             c.die();
         } else if (t < 30) {
             // MVC "Un <espece> est mort de froid"

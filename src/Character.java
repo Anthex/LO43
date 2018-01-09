@@ -12,8 +12,8 @@ public class Character {
         humidity = c.humidity;
         sleep = c.sleep;
         energy = c.energy;
-        x = c.x;
-        y = c.y;
+        x = (int) (Math.random() * 800);
+        y = (int) (Math.random() * 450);
         sp = c.sp;
         ha = c.ha;
     }

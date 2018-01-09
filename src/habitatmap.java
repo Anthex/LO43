@@ -25,19 +25,19 @@ public class habitatmap extends JFrame {
         ha = new Habitat(h);
         switch (h) {
             case 0:
-                picPath = "src/assets/river.jpg";
+                picPath = "src/assets/sky.jpg";
                 break;
             case 1:
                 picPath = "src/assets/glassground.jpg";
                 break;
             case 2:
-                picPath = "src/assets/desert.jpg";
+                picPath = "src/assets/beach.jpg";
                 break;
             case 3:
                 picPath = "src/assets/forest.jpg";
                 break;
             case 4:
-                picPath = "src/assets/beach.jpg";
+                picPath = "src/assets/sea.jpg";
                 break;
         }
         this.setTitle("World");
@@ -62,16 +62,10 @@ public class habitatmap extends JFrame {
 	/* Action listener to add new characters on button click*/
         jb0.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                //Character c = new Character(ha.sep(0));
-                String a="";
-                for(Character c:localCharacters){
-                    a+= " - " + c.getSp();
-                }
-                javax.swing.JOptionPane.showMessageDialog(null,a);
-
+                Character c = new Character(ha.sep(0));
+                refToCharacters.add(c);
                 updateGraphics();
                 System.out.println("Added a " + ha.sep(0).toString() + " in " + ha.getName());
-                //ha.addchar(c);
             }
         });
 
@@ -80,9 +74,9 @@ public class habitatmap extends JFrame {
         lab.add(jb1);
         jb1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                //Character c = new Character(ha.sep(1));
+                Character c = new Character(ha.sep(1));
+                refToCharacters.add(c);;
                 System.out.println("Added a " + ha.sep(1).toString() + " in " + ha.getName());
-                //ha.addchar(c);
             }
         });
 
@@ -91,8 +85,17 @@ public class habitatmap extends JFrame {
         lab.add(jb2);
         jb2.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                System.out.println("Removed a " + ha.sep(0).toString() + " in " + ha.getName());
-                //ha.deletchara(c);
+                int index=0;
+                while(refToCharacters.get(index).getHabitat() != h && refToCharacters.get(index).getSp()!=ha.sep(0) && refToCharacters.size()>index+1){
+                    index++;
+                }
+                if(refToCharacters.size()>index+1){
+                    System.out.println("Removed a " + ha.sep(0).toString() + " in " + ha.getName());
+                    refToCharacters.remove(index);
+                }else{
+                    System.out.println("Il semblerait qu'il n'y ait plus de " + ha.sep(0).toString() + " dans " + ha.getName());
+                }
+
             }
         });
 
@@ -101,8 +104,16 @@ public class habitatmap extends JFrame {
         lab.add(jb3);
         jb3.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                System.out.println("Removed a " + ha.sep(1).toString() + " in " + ha.getName());
-                //ha.deletchara(c);
+                int index=0;
+                while(refToCharacters.get(index).getHabitat() != h && refToCharacters.get(index).getSp()!=ha.sep(1) && refToCharacters.size()>index+1){
+                    index++;
+                }
+                if(refToCharacters.size()>index+1){
+                    System.out.println("Removed a " + ha.sep(1).toString() + " in " + ha.getName());
+                    refToCharacters.remove(index);
+                }else{
+                    System.out.println("Il semblerait qu'il n'y ait plus de " + ha.sep(1).toString() + " dans " + ha.getName());
+                }
             }
         });
 
