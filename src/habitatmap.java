@@ -17,10 +17,12 @@ public class habitatmap extends JFrame {
     JButton jb0, jb1, jb2, jb3;
     JLabel lab;
     Icon icon;
+    ArrayList<JLabel> sprites;
     ArrayList<Character> localCharacters;
     ArrayList<Character> globalCharactersReference; //used to add new characters
     public habitatmap(int h,  ArrayList<Character> refToCharacters) {
         localCharacters = new ArrayList<>();
+        sprites = new ArrayList<>();
         String picPath = null;
         ha = new Habitat(h);
         switch (h) {
@@ -42,7 +44,7 @@ public class habitatmap extends JFrame {
         }
         this.setTitle("World");
 
-        icon = new ImageIcon(picPath );
+        icon = new ImageIcon(picPath);
 
 
 
@@ -62,9 +64,8 @@ public class habitatmap extends JFrame {
 	/* Action listener to add new characters on button click*/
         jb0.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                Character c = new Character(ha.sep(0));
+                Character c = new Character(ha.sep(0), ha.getId());
                 refToCharacters.add(c);
-                updateGraphics();
                 System.out.println("Added a " + ha.sep(0).toString() + " in " + ha.getName());
             }
         });
@@ -74,8 +75,8 @@ public class habitatmap extends JFrame {
         lab.add(jb1);
         jb1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                Character c = new Character(ha.sep(1));
-                refToCharacters.add(c);;
+                Character c = new Character(ha.sep(1), ha.getId());
+                refToCharacters.add(c);
                 System.out.println("Added a " + ha.sep(1).toString() + " in " + ha.getName());
             }
         });

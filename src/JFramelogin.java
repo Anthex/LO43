@@ -1,20 +1,16 @@
 import java.awt.GridLayout;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
+import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.JButton;
 
 
 public class JFramelogin extends JFrame {
     private GameManager g;
     private marche ma;
+    JSpinner spin=null;
 
     public JFramelogin() {
-
         this.setTitle("Welcome");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setBounds(300, 250, 400, 300);
@@ -27,9 +23,14 @@ public class JFramelogin extends JFrame {
         contentPane.setLayout(new GridLayout(3, 1, 5, 5));
         JPanel pane1 = new JPanel();
         contentPane.add(pane1);
-        JLabel label1 = new JLabel("Welcome. Please enter your username:");
+        JLabel label1 = new JLabel("Username (optional) :");
         pane1.add(label1);
         pane1.add(textField1);
+        JLabel label2 = new JLabel("How many entities do you want to create?");
+        pane1.add(label2);
+        spin = new JSpinner();
+        spin.setValue(20);
+        pane1.add(spin);
         JButton another = new JButton("log in");
         another.setBounds(120, 85, 100, 50);
         contentPane.add(another);
@@ -37,6 +38,7 @@ public class JFramelogin extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 String na = textField1.getText();
                 g = new GameManager(na); //create the gamemanager which will generate habitats
+                g.createCharacters(((Number)spin.getValue()).intValue());
                 dispose();
                 ma = new marche(g.getHabitatsMaps()); // create the marche with the habitats' references
                 ma.setVisible(true);
@@ -51,17 +53,13 @@ public class JFramelogin extends JFrame {
         while (!startWindow.ma.isVisible())
             ; //make sure the component is initialized in order to avoid aborting the program on main loop
 
-        startWindow.g.createCharacter();
-        startWindow.g.createCharacter();
-        startWindow.g.createCharacter();
-
 
         // MAIN LOOP CALL
         while (startWindow.g.getPopulation() > 0 && startWindow.ma.isVisible()) {
             startWindow.g.loop();
             startWindow.g.updateAllLocalCharacters();
             try {
-                Thread.sleep(500);
+                Thread.sleep(2000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

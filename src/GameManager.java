@@ -58,50 +58,40 @@ public class GameManager implements CharacterManager, UserInteractionManager {
     public void generateEvents(Character c) {
         int t = (int) (Math.random() * 100 + (habitatsList[c.getHabitat()].ha.getTemp() - c.getTemp()));
 
-        if (t < 15) {
-            c.die();
+        //GENERATE DYING EVENT
+        if (t < 5) {
+            characters.remove(c);
+            System.out.println("(!) aUn " + c.getSp().toString() + " est mort dans " + habitatsList[c.getHabitat()].ha.getName());
+        } else if (t > 95) {
+            characters.remove(c);
+            System.out.println("(!)b Un " + c.getSp().toString() + " est mort dans " + habitatsList[c.getHabitat()].ha.getName());
+        }
+
+        /*
+        int s = (int) (Math.random() * 100 + (habitatsList[c.getHabitat()].ha.getSleep() - c.getSleep()));
+        if (s < -10) {
             characters.remove(c);
             System.out.println("(!) Un " + c.getSp().toString() + " est mort dans " + habitatsList[c.getHabitat()].ha.getName());
-        } else if (t > 85) {
-            c.die();
-        } else if (t < 30) {
-            // MVC "Un <espece> est mort de froid"
-        } else if (t > 70) {
-            //MVC "Un <espece> est mort de chaud"
         }
+
         int h = (int) (Math.random() * 100 + (habitatsList[c.getHabitat()].ha.getHumidity() - c.getHumidity()));
-
-        if (h < 20) {
-            c.die();
-        } else if (h > 80) {
-            c.die();
-        } else if (h < 30) {
-            // MVC "Un >espece> s'est déshydraté"
-        } else if (h > 70) {
-            //MVC "Un <espece> s'est noyé"
+        if (h < -20) {
+            characters.remove(c);
+            System.out.println("(!) Un " + c.getSp().toString() + " est mort dans de  " + habitatsList[c.getHabitat()].ha.getName());
+        } else if (h > 120) {
+            characters.remove(c);
+            System.out.println("(!) Un " + c.getSp().toString() + " est mort dans " + habitatsList[c.getHabitat()].ha.getName());
         }
-        int s = (int) (Math.random() * 100 + (habitatsList[c.getHabitat()].ha.getSleep() - c.getSleep()));
 
-        if (s < 20) {
-            c.die();
-        } else if (s > 80) {
-            c.die();
-        } else if (s < 30) {
-            // MVC "Un <espece> est mort de fatigue"
-        } else if (s > 70) {
-            //MVC "Un <espece> est mort dans son sommeil"
-        }
         int e = (int) (Math.random() * 100 + (habitatsList[c.getHabitat()].ha.getEnergy() - c.getEnergy()));
-
-        if (e < 20) {
-            c.die();
-        } else if (e > 80) {
-            c.die();
-        } else if (e < 30) {
-            // MVC "Un <espece> est mort de faim"
-        } else if (e > 70) {
-            //MVC "Un <espece> a fait une indigestion"
+        if (e < -50) {
+            characters.remove(c);
+            System.out.println("(!) Un " + c.getSp().toString() + " est mort dans " + habitatsList[c.getHabitat()].ha.getName());
+        } else if (e > 150) {
+            characters.remove(c);
+            System.out.println("(!) Un " + c.getSp().toString() + " est mort dans " + habitatsList[c.getHabitat()].ha.getName());
         }
+        */
     }
 
     public void generateEvents(Habitat h) {
@@ -233,8 +223,8 @@ public class GameManager implements CharacterManager, UserInteractionManager {
         return out;
     }
 
-    public void createCharacter() {
-        for(int i=0; i<20; i++){
+    public void createCharacters(int n) {
+        for(int i=0; i<n; i++){
             characters.add(new Character());
         }
     }

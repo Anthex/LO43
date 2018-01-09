@@ -83,6 +83,51 @@ public class Character {
                 break;
         }
     }
+    public Character(Species sp2, int h) {
+        Species expression = sp2;
+        switch (expression){
+            case angel:
+                temp = 75;
+                humidity = 25;
+                sleep = 50;
+                energy = 25;
+                x = 200+(int) (Math.random() * 600);
+                y = 100+(int) (Math.random() * 300);
+                sp = sp2;
+                ha = h;
+                break;
+            case human:
+                temp = 50;
+                humidity = 50;
+                sleep = 50;
+                energy = 50;
+                x = 200+(int) (Math.random() * 600);
+                y = 100+(int) (Math.random() * 300);
+                sp = sp2;
+                ha = h;
+                break;
+            case centaur:
+                temp = 25;
+                humidity = 75;
+                sleep = 75;
+                energy = 75;
+                x = 200+(int) (Math.random() * 600);
+                y = 100+(int) (Math.random() * 300);
+                sp = sp2;
+                ha = h;
+                break;
+            case mermaid:
+                temp = 75;
+                humidity = 25;
+                sleep = 25;
+                energy = 50;
+                x = 200+(int) (Math.random() * 600);
+                y = 100+(int) (Math.random() * 300);
+                sp = sp2;
+                ha = h;
+                break;
+        }
+    }
 
 
     public Character(int t, int h, int s, int e, Species sp2, int h2) {
@@ -119,9 +164,6 @@ public class Character {
                 break;
         }
     }
-
-    public void die() {
-    } //MVC
 
     public void move(int x, int y) {
         this.x += x;
