@@ -161,8 +161,8 @@ public class habitatmap extends JFrame {
                 character.setBounds(0, 0, size.width, size.height);
                 character.setLocation(localChar.getX(), localChar.getY());
             }
-            this.add(lab);
         }
+        this.add(lab);
         this.validate();
     }
 }

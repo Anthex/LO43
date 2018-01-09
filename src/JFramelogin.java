@@ -31,7 +31,7 @@ public class JFramelogin extends JFrame {
         spin = new JSpinner();
         spin.setValue(20);
         pane1.add(spin);
-        JButton another = new JButton("log in");
+        JButton another = new JButton("Start simulation");
         another.setBounds(120, 85, 100, 50);
         contentPane.add(another);
         another.addActionListener(new ActionListener() {
