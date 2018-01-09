@@ -1,8 +1,6 @@
 import java.awt.GridLayout;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 
 public class JFramelogin extends JFrame {
@@ -30,7 +28,7 @@ public class JFramelogin extends JFrame {
         JLabel label2 = new JLabel("Combien d'entitées voulez-vous créer?");
         pane1.add(label2);
         spin = new JSpinner();
-        spin.setValue(20);
+        spin.setValue(40);
         pane1.add(spin);
         JButton another = new JButton("Débuter la simulation");
         another.setBounds(120, 85, 100, 50);

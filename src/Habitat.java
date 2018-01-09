@@ -53,9 +53,9 @@ public class Habitat {
                 name = "mountain";
                 se[0] = Species.centaur;
                 se[1] = Species.angel;
-                temp = 30;
+                temp = 20;
                 humidity = 60;
-                sleep = 30;
+                sleep = 50;
                 energy = 60;
                 break;
             case 4:

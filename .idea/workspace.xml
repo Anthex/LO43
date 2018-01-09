@@ -7,11 +7,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2b911509-36e3-4ae7-8935-3c27824e3a63" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Main.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/manifest/META-INF/MANIFEST.MF" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/vivarium/Habitat.class" afterPath="$PROJECT_DIR$/out/production/vivarium/Habitat.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/vivarium/marche$1.class" afterPath="$PROJECT_DIR$/out/production/vivarium/marche$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/vivarium/marche$2.class" afterPath="$PROJECT_DIR$/out/production/vivarium/marche$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/vivarium/marche$3.class" afterPath="$PROJECT_DIR$/out/production/vivarium/marche$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/vivarium/marche$4.class" afterPath="$PROJECT_DIR$/out/production/vivarium/marche$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/vivarium/marche$5.class" afterPath="$PROJECT_DIR$/out/production/vivarium/marche$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/vivarium/marche.class" afterPath="$PROJECT_DIR$/out/production/vivarium/marche.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Habitat.java" afterPath="$PROJECT_DIR$/src/Habitat.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/JFramelogin.java" afterPath="$PROJECT_DIR$/src/JFramelogin.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/habitatmap.java" afterPath="$PROJECT_DIR$/src/habitatmap.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/marche.java" afterPath="$PROJECT_DIR$/src/marche.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -41,11 +49,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="habitatmap.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="habitatmap.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/habitatmap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="55" column="14" lean-forward="false" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="14" />
+            <state relative-caret-position="-1173">
+              <caret line="21" column="30" lean-forward="true" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -66,8 +74,8 @@
       <file leaf-file-name="JFramelogin.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/JFramelogin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
-              <caret line="21" column="41" lean-forward="true" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
+            <state relative-caret-position="510">
+              <caret line="30" column="24" lean-forward="false" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -75,11 +83,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="19" lean-forward="false" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
+            <state relative-caret-position="306">
+              <caret line="18" column="9" lean-forward="true" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -88,8 +96,8 @@
       <file leaf-file-name="marche.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/marche.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="19" column="33" lean-forward="false" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
+            <state relative-caret-position="340">
+              <caret line="25" column="32" lean-forward="false" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -108,8 +116,8 @@
       <file leaf-file-name="GameManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GameManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="74" column="88" lean-forward="false" selection-start-line="74" selection-start-column="88" selection-end-line="74" selection-end-column="88" />
+            <state relative-caret-position="284">
+              <caret line="106" column="88" lean-forward="true" selection-start-line="106" selection-start-column="88" selection-end-line="106" selection-end-column="88" />
               <folding>
                 <element signature="e#7182#7193#0" expanded="true" />
                 <element signature="e#7854#7865#0" expanded="true" />
@@ -121,8 +129,8 @@
       <file leaf-file-name="Habitat.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Habitat.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="381">
-              <caret line="64" column="25" lean-forward="false" selection-start-line="64" selection-start-column="25" selection-end-line="64" selection-end-column="25" />
+            <state relative-caret-position="969">
+              <caret line="57" column="25" lean-forward="false" selection-start-line="57" selection-start-column="25" selection-end-line="57" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -147,12 +155,12 @@
       <find>merma</find>
       <find>crea</find>
       <find>die</find>
-      <find>genera</find>
       <find>log</find>
       <find>asser</find>
-      <find>picpa</find>
       <find>path</find>
+      <find>picpa</find>
       <find>lab =</find>
+      <find>genera</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -167,15 +175,15 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/Species.java" />
-        <option value="$PROJECT_DIR$/src/Habitat.java" />
-        <option value="$PROJECT_DIR$/src/GameManager.java" />
         <option value="$PROJECT_DIR$/src/Character.java" />
-        <option value="$PROJECT_DIR$/src/marche.java" />
-        <option value="$PROJECT_DIR$/src/JFramelogin.java" />
         <option value="$PROJECT_DIR$/src/CustomOutPutStream.java" />
         <option value="$PROJECT_DIR$/src/CustomOutputStream.java" />
-        <option value="$PROJECT_DIR$/src/habitatmap.java" />
+        <option value="$PROJECT_DIR$/src/Habitat.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/marche.java" />
+        <option value="$PROJECT_DIR$/src/JFramelogin.java" />
+        <option value="$PROJECT_DIR$/src/GameManager.java" />
+        <option value="$PROJECT_DIR$/src/habitatmap.java" />
       </list>
     </option>
   </component>
@@ -361,12 +369,12 @@
       <option name="presentableId" value="Default" />
       <updated>1515444454454</updated>
       <workItem from="1515444463617" duration="14047000" />
-      <workItem from="1515484101408" duration="10696000" />
+      <workItem from="1515484101408" duration="14454000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33693000" />
+    <option name="totallyTimeSpent" value="37451000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1513" height="983" extended-state="6" />
@@ -417,14 +425,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/marche.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/CharacterManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -723,14 +723,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Habitat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="64" column="25" lean-forward="false" selection-start-line="64" selection-start-column="25" selection-end-line="64" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="uml://JAVA/JFramelogin">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -761,32 +753,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameManager.java">
+    <entry file="file://$PROJECT_DIR$/src/CustomOutputStream.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
-          <caret line="74" column="88" lean-forward="false" selection-start-line="74" selection-start-column="88" selection-end-line="74" selection-end-column="88" />
-          <folding>
-            <element signature="e#7182#7193#0" expanded="true" />
-            <element signature="e#7854#7865#0" expanded="true" />
-          </folding>
+          <caret line="18" column="13" lean-forward="true" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Habitat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="969">
+          <caret line="57" column="25" lean-forward="false" selection-start-line="57" selection-start-column="25" selection-end-line="57" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/marche.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="19" column="33" lean-forward="false" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
+        <state relative-caret-position="340">
+          <caret line="25" column="32" lean-forward="false" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/JFramelogin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="21" column="41" lean-forward="true" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
+        <state relative-caret-position="510">
+          <caret line="30" column="24" lean-forward="false" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="9" lean-forward="true" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -803,29 +808,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CustomOutputStream.java">
+    <entry file="file://$PROJECT_DIR$/src/GameManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="13" lean-forward="true" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        <state relative-caret-position="284">
+          <caret line="106" column="88" lean-forward="true" selection-start-line="106" selection-start-column="88" selection-end-line="106" selection-end-column="88" />
+          <folding>
+            <element signature="e#7182#7193#0" expanded="true" />
+            <element signature="e#7854#7865#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_131/src.zip!/java/awt/event/ActionListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="49" column="16" lean-forward="false" selection-start-line="49" selection-start-column="16" selection-end-line="49" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/habitatmap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="55" column="14" lean-forward="false" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="14" />
+        <state relative-caret-position="-1173">
+          <caret line="21" column="30" lean-forward="true" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="19" lean-forward="false" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>

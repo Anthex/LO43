@@ -17,24 +17,13 @@ public class marche extends JFrame {
         String picPath = "assets/map.jpg";
         Icon icon = new ImageIcon(getClass().getResource(picPath));
         JLabel lab = new JLabel(icon, JLabel.CENTER);
-        Font font = new Font("����", Font.ITALIC + Font.BOLD, 28);
-        lab.setForeground(Color.RED);
-        lab.setBackground(Color.YELLOW);
-        lab.setFont(font);
-
         this.add(lab);
         Dimension d = new Dimension();
-
         d.setSize(900, 510);
-
         this.setSize(d);
-
         this.setBackground(Color.WHITE);
-
         Point p = new Point();
-
         p.setLocation(280, 180);
-
         this.setLocation(p);
         JButton jb0 = new JButton("sky");
         jb0.setBounds(50, 40, 60, 20);

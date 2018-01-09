@@ -1,6 +1,5 @@
 import java.awt.Color;
 import java.awt.Dimension;
-import java.awt.Font;
 import java.awt.Point;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -12,19 +11,19 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-public class habitatmap extends JFrame {
+class habitatmap extends JFrame {
     Habitat ha;
-    JButton jb0, jb1, jb2, jb3;
-    JLabel lab;
-    Icon icon;
-    ImageIcon human;
-    ImageIcon centaur;
-    ImageIcon angel;
-    ImageIcon mermaid;
-    ArrayList<JLabel> sprites;
+    private JButton jb0, jb1, jb2, jb3;
+    private JLabel lab;
+    private Icon icon;
+    private ImageIcon human;
+    private ImageIcon centaur;
+    private ImageIcon angel;
+    private ImageIcon mermaid;
+    private ArrayList<JLabel> sprites;
     ArrayList<Character> localCharacters;
     ArrayList<Character> globalCharactersReference; //used to add new characters
-    public habitatmap(int h,  ArrayList<Character> refToCharacters) {
+    habitatmap(int h,  ArrayList<Character> refToCharacters) {
         human = new ImageIcon(getClass().getResource("assets/char/human.png"));
         centaur = new ImageIcon(getClass().getResource("assets/char/centaur.png"));
         angel = new ImageIcon(getClass().getResource("assets/char/angel.png"));
@@ -83,6 +82,7 @@ public class habitatmap extends JFrame {
                 Character c = new Character(ha.sep(1), ha.getId());
                 refToCharacters.add(c);
                 System.out.println("Added a " + ha.sep(1).toString() + " in " + ha.getName());
+                updateGraphics();
             }
         });
 
@@ -101,7 +101,7 @@ public class habitatmap extends JFrame {
                 }else{
                     System.out.println("Il semblerait qu'il n'y ait plus de " + ha.sep(0).toString() + " dans " + ha.getName());
                 }
-
+                updateGraphics();
             }
         });
 

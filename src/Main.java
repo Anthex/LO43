@@ -1,9 +1,7 @@
 public class Main {
     public static void main(String[] args) {
         JFramelogin startWindow = new JFramelogin();
-        //while (startWindow.ma.isVisible() == false) ; // wait for the gamemanager to be initialized
-        //while (!startWindow.ma.isVisible())
-        ; //make sure the component is initialized in order to avoid aborting the program on main loop
+
         // MAIN LOOP CALL
         while (startWindow.g.getPopulation() > 0 /*&& startWindow.ma.isVisible()*/) {
             startWindow.g.loop();
