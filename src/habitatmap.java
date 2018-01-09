@@ -131,7 +131,11 @@ public class habitatmap extends JFrame {
         panel.setBackground(new Color(0,0,0,0));
         panel.setLayout(null);
 
-
+        //Clear sprites
+        for (JLabel current:sprites){
+            this.remove(current);
+        }
+        sprites.clear();
         for(Character localChar:localCharacters){
             JLabel character=null;
             Species expression = localChar.getSp();
@@ -150,6 +154,7 @@ public class habitatmap extends JFrame {
                     break;
             }
             this.add(character);
+            sprites.add(character);
             Dimension size = character.getPreferredSize();
             character.setBounds(0, 0, size.width, size.height);
             character.setLocation(localChar.getX(),localChar.getY());
