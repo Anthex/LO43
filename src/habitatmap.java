@@ -119,14 +119,17 @@ public class habitatmap extends JFrame {
 
     }
 
+
     public void updateGraphics(){
         ImageIcon human = new ImageIcon("src/assets/char/human.png");
         ImageIcon centaur = new ImageIcon("src/assets/char/centaur.png");
         ImageIcon angel = new ImageIcon("src/assets/char/angel.png");
+        ImageIcon mermaid = new ImageIcon("src/assets/char/mermaid.jpg");
         JPanel panel = (JPanel) this.getContentPane();
         panel.setBounds(0, 0, 900, 510);
         panel.setBackground(new Color(0,0,0,0));
         panel.setLayout(null);
+
 
         for(Character localChar:localCharacters){
             JLabel character=null;
@@ -142,7 +145,7 @@ public class habitatmap extends JFrame {
                     character  = new JLabel(centaur);
                     break;
                 case mermaid:
-                    character  = new JLabel(human);
+                    character  = new JLabel(mermaid);
                     break;
             }
             this.add(character);

@@ -234,12 +234,9 @@ public class GameManager implements CharacterManager, UserInteractionManager {
     }
 
     public void createCharacter() {
-        characters.add(new Character());
-        characters.add(new Character());
-        characters.add(new Character());
-        characters.add(new Character());
-        characters.add(new Character());
-        characters.add(new Character());
+        for(int i=0; i<20; i++){
+            characters.add(new Character());
+        }
     }
 
     public int getPopulation() {

@@ -29,7 +29,7 @@ public class Character {
                 x = (int) (Math.random() * 800);
                 y = (int) (Math.random() * 450);
                 sp = Species.angel;
-                ha = (int) (Math.random() * 4);
+                ha = Math.random()>.5 ? 0:3;
                 break;
             case 1:
                 temp = 50;
@@ -39,7 +39,17 @@ public class Character {
                 x = (int) (Math.random() * 800);
                 y = (int) (Math.random() * 450);
                 sp = Species.human;
-                ha = (int) (Math.random() * 4);
+                switch((int)Math.random()*3){
+                case 0:
+                    ha=0;
+                    break;
+                case 1:
+                    ha=1;
+                    break;
+                case 2:
+                    ha=4;
+                    break;
+            }
                 break;
             case 2:
                 temp = 25;
@@ -49,7 +59,17 @@ public class Character {
                 x = (int) (Math.random() * 800);
                 y = (int) (Math.random() * 450);
                 sp = Species.centaur;
-                ha = (int) (Math.random() * 4);
+                switch((int)Math.random()*3) {
+                    case 0:
+                        ha = 1;
+                        break;
+                    case 1:
+                        ha = 2;
+                        break;
+                    case 2:
+                        ha = 3;
+                        break;
+                }
                 break;
             case 3:
                 temp = 75;
@@ -59,7 +79,7 @@ public class Character {
                 x = (int) (Math.random() * 800);
                 y = (int) (Math.random() * 450);
                 sp = Species.mermaid;
-                ha = (int) (Math.random() * 4);
+                ha = Math.random()>.5 ? 2:4;
                 break;
         }
     }
